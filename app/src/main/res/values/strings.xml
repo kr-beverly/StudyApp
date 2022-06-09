@@ -10,6 +10,9 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
+
+    <string name="action_voucher">이용권</string>
+
     <string name="action_voucher_day">개인일일이용권</string>
     <string name="action_voucher_time">개인시간이용권</string>
     <string name="action_voucher_group4">단체이용권 4인</string>
