@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/sign_resvation"
+        android:enabled="true"
+        android:title="예약"
+        android:icon="@drawable/ic_baseline_calendar_month_24"></item>
+
+    <item
+        android:id="@+id/sign_voucher"
+        android:enabled="true"
+        android:title="이용권"
+        android:icon="@drawable/premium_icon_coupon_941056"></item>
+
+    <item
+        android:id="@+id/sign_notice"
+        android:enabled="true"
+        android:title="게시판"
+        android:icon="@drawable/ic_baseline_co_present_24"></item>
+
+    <item
+        android:id="@+id/sign_myfage"
+        android:enabled="true"
+        android:title="마이페이지"
+        android:icon="@drawable/myfage"></item>
+</menu>
