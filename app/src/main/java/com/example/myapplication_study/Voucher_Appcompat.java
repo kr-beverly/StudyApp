@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import java.io.*;
+
 public class Voucher_Appcompat extends AppCompatActivity{
     RadioGroup gr_voucher, gr_voucher_day, gr_voucher_time, gr_voucher_group4, gr_voucher_group6;
     RadioButton voucher_day, voucher_time, voucher_group4, voucher_group6;
@@ -21,7 +23,6 @@ public class Voucher_Appcompat extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_voucher);
 
         gr_voucher = findViewById(R.id.gr_voucher);
