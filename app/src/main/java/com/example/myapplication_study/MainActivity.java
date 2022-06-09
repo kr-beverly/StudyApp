@@ -63,8 +63,10 @@ public class MainActivity extends AppCompatActivity {
         voucher = new  Voucher();
         notice = new Notice();
         myfage = new Myfage();
-        setFrag(0); //첫 프래그먼트 화면 지정
+        setFrag(1); //첫 프래그먼트 화면 지정
+
     }
+
 
     //프레그먼트 교체
     private void setFrag (int n) {

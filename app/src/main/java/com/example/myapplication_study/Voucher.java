@@ -10,7 +10,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 public class Voucher extends Fragment{
-
     private View view;
 
     @Nullable

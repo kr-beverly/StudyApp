@@ -17,8 +17,7 @@
 
         <Button
             android:id="@+id/sign_btn_logout"
-            android:layout_width="150dp"
-            android:text="LogOut"
+            android:layout_width="50dp"
             android:layout_height="match_parent"
             android:textSize="15sp"
             app:icon="@drawable/ic_logout"
@@ -40,14 +39,43 @@
         app:layout_constraintTop_toBottomOf="@+id/sign_linearLayout"
         app:layout_constraintVertical_bias="0.574"></FrameLayout>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
+    <LinearLayout
         android:id="@+id/sign_bottomNavi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:itemIconTint="#000000"
+        app:itemTextColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_menu"
-        app:layout_constraintTop_toBottomOf="@+id/main_frame"/>
+        tools:layout_editor_absoluteX="29dp">
+
+        <Button
+            android:id="@+id/sign_resvation"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:text="예약"></Button>
+        <Button
+            android:id="@+id/sign_voucher"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:text="이용권"></Button>
+        <Button
+            android:id="@+id/sign_notice"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:text="게시판"></Button>
+        <Button
+            android:id="@+id/sign_myfage"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:text="마이페이지"></Button>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

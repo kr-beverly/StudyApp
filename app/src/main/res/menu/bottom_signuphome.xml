@@ -23,4 +23,11 @@
         android:enabled="true"
         android:title="마이페이지"
         android:icon="@drawable/myfage"></item>
+
+    <item
+        android:id="@+id/logout"
+        android:enabled="true"
+        android:title="로그아웃"
+        android:icon="@drawable/ic_logout"></item>
+
 </menu>
