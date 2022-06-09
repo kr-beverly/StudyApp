@@ -5,11 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Reservation">
+    tools:context=".Voucher">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
@@ -185,6 +186,4 @@
                 android:text="@string/action_voucher_group6_6" />
         </RadioGroup>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 </LinearLayout>

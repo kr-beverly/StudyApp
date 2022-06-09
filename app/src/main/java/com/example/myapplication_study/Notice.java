@@ -11,14 +11,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 public class Notice extends Fragment {
-    public Notice() {
-        // Required empty public constructor
-    }
+    private View view;
 
+    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        view = inflater.inflate(R.layout.activity_notice, container, false);
 
-        return inflater.inflate(R.layout.activity_notice, container, false);
+        return view;
     }
 }
