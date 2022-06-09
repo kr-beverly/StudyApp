@@ -4,7 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     tools:context=".Signup_home">
+=======
+    tools:context=".Signup">
+>>>>>>> 11b480b41a237084994d360ec930a258be9fa969
 
     <LinearLayout
         android:layout_width="fill_parent"

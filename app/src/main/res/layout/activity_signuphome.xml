@@ -5,7 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     tools:context=".Signup">
+=======
+    tools:context=".Signup_home">
+>>>>>>> 11b480b41a237084994d360ec930a258be9fa969
 
     <LinearLayout
         android:id="@+id/sign_linearLayout"
@@ -17,7 +21,12 @@
 
         <Button
             android:id="@+id/sign_btn_logout"
+<<<<<<< HEAD
             android:layout_width="50dp"
+=======
+            android:layout_width="150dp"
+            android:text="LogOut"
+>>>>>>> 11b480b41a237084994d360ec930a258be9fa969
             android:layout_height="match_parent"
             android:textSize="15sp"
             app:icon="@drawable/ic_logout"
@@ -33,13 +42,17 @@
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
+<<<<<<< HEAD
         android:layout_marginBottom="8dp"
+=======
+>>>>>>> 11b480b41a237084994d360ec930a258be9fa969
         app:layout_constraintBottom_toTopOf="@+id/sign_bottomNavi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sign_linearLayout"
         app:layout_constraintVertical_bias="0.574"></FrameLayout>
 
+<<<<<<< HEAD
     <LinearLayout
         android:id="@+id/sign_bottomNavi"
         android:layout_width="match_parent"
@@ -78,5 +91,16 @@
             android:background="@color/black"
             android:text="마이페이지"></Button>
     </LinearLayout>
+=======
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/sign_bottomNavi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_menu"
+        app:layout_constraintTop_toBottomOf="@+id/main_frame"/>
+>>>>>>> 11b480b41a237084994d360ec930a258be9fa969
 
 </androidx.constraintlayout.widget.ConstraintLayout>

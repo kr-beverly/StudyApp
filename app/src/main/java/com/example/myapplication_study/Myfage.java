@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 public class Myfage extends Fragment {
+<<<<<<< HEAD
     public Myfage() {
         // Required empty public constructor
     }
@@ -19,5 +20,14 @@ public class Myfage extends Fragment {
                              Bundle savedInstanceState) {
 
         return inflater.inflate(R.layout.activity_myfage, container, false);
+=======
+    private View view;
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        view = inflater.inflate(R.layout.activity_myfage, container, false);
+        return view;
+>>>>>>> 11b480b41a237084994d360ec930a258be9fa969
     }
 }

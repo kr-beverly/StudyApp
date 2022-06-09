@@ -26,7 +26,10 @@
             android:exported="false"
             android:label="@string/title_activity_reservation"
             android:theme="@style/Theme.MyApplication_study.NoActionBar" />
+<<<<<<< HEAD
 
+=======
+>>>>>>> 11b480b41a237084994d360ec930a258be9fa969
         <activity
             android:name=".MainActivity"
             android:exported="true"

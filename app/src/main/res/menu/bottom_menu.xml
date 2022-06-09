@@ -1,22 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
+<<<<<<< HEAD
         android:id="@+id/resvation"
+=======
+        android:id="@+id/reservation"
+        android:enabled="true"
+>>>>>>> 11b480b41a237084994d360ec930a258be9fa969
         android:title="예약"
         android:icon="@drawable/ic_baseline_calendar_month_24"></item>
 
     <item
         android:id="@+id/voucher"
+<<<<<<< HEAD
+=======
+        android:enabled="true"
+>>>>>>> 11b480b41a237084994d360ec930a258be9fa969
         android:title="이용권"
         android:icon="@drawable/premium_icon_coupon_941056"></item>
 
     <item
         android:id="@+id/notice"
+<<<<<<< HEAD
+=======
+        android:enabled="true"
+>>>>>>> 11b480b41a237084994d360ec930a258be9fa969
         android:title="게시판"
         android:icon="@drawable/ic_baseline_co_present_24"></item>
 
     <item
         android:id="@+id/myfage"
+<<<<<<< HEAD
+=======
+        android:enabled="true"
+>>>>>>> 11b480b41a237084994d360ec930a258be9fa969
         android:title="마이페이지"
         android:icon="@drawable/myfage"></item>
 </menu>

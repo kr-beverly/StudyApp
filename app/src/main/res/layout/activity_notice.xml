@@ -6,10 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".Notice">
 
+<<<<<<< HEAD
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="로그인 전 게시판"
         android:textSize="30dp"/>
+=======
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/reg_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="새 글 작성하기"
+        android:textColor="#FFFFFF" />
+>>>>>>> 11b480b41a237084994d360ec930a258be9fa969
 
 </LinearLayout>

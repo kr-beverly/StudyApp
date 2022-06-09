@@ -12,19 +12,35 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
+=======
+        app:layout_constraintHorizontal_bias="1.0"
+>>>>>>> 11b480b41a237084994d360ec930a258be9fa969
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/btn_login"
+<<<<<<< HEAD
             android:layout_width="50dp"
             android:layout_height="match_parent"
             android:background="@color/black"
+=======
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:text="Login"
+>>>>>>> 11b480b41a237084994d360ec930a258be9fa969
             android:textSize="15sp"
             app:icon="@drawable/ic_baseline_login_24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+<<<<<<< HEAD
             app:layout_constraintTop_toTopOf="parent" />
+=======
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+>>>>>>> 11b480b41a237084994d360ec930a258be9fa969
     </LinearLayout>
 
     <FrameLayout
@@ -33,13 +49,17 @@
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
+<<<<<<< HEAD
         android:layout_marginBottom="8dp"
+=======
+>>>>>>> 11b480b41a237084994d360ec930a258be9fa969
         app:layout_constraintBottom_toTopOf="@+id/bottomNavi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:layout_constraintVertical_bias="0.574"></FrameLayout>
 
+<<<<<<< HEAD
     <LinearLayout
         android:id="@+id/bottomNavi"
         android:layout_width="match_parent"
@@ -78,4 +98,16 @@
             android:background="@color/black"
             android:text="마이페이지"></Button>
     </LinearLayout>
+=======
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_menu"
+        app:layout_constraintTop_toBottomOf="@+id/main_frame"/>
+
+>>>>>>> 11b480b41a237084994d360ec930a258be9fa969
 </androidx.constraintlayout.widget.ConstraintLayout>

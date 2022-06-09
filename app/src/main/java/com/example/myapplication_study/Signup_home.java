@@ -1,5 +1,6 @@
 package com.example.myapplication_study;
 
+<<<<<<< HEAD
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -10,6 +11,32 @@ import android.widget.Button;
 public class Signup_home extends AppCompatActivity {
     private Button sign_btn_logout;
 
+=======
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+public class Signup_home extends AppCompatActivity {
+    private Button sign_btn_logout;
+
+    private BottomNavigationView bottomNavigationView;
+    private FragmentManager fm;
+    private FragmentTransaction ft;
+    private Reservation reservation;
+    private Voucher voucher;
+    private Notice notice;
+    private Myfage myfage;
+
+>>>>>>> 11b480b41a237084994d360ec930a258be9fa969
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,5 +50,59 @@ public class Signup_home extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+<<<<<<< HEAD
+=======
+
+        bottomNavigationView =findViewById(R.id.bottomNavi);
+        bottomNavigationView.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.sign_resvation:
+                        setFrag(0);
+                        break;
+                    case R.id.sign_voucher:
+                        setFrag(1);
+                        break;
+                    case R.id.sign_notice:
+                        setFrag(2);
+                        break;
+                    case R.id.sign_myfage:
+                        setFrag(3);
+                        break;
+                }
+                return true;
+            }
+        });
+        reservation = new Reservation();
+        voucher = new  Voucher();
+        notice = new Notice();
+        myfage = new Myfage();
+        setFrag(0); //첫 프래그먼트 화면 지정
+    }
+    //프레그먼트 교체
+    private void setFrag (int n) {
+        fm = getSupportFragmentManager();
+        ft = fm.beginTransaction();
+
+        switch (n) {
+            case 0:
+                ft.replace(R.id.main_frame, reservation);
+                ft.commit();
+                break;
+            case 1:
+                ft.replace(R.id.main_frame, voucher);
+                ft.commit();
+                break;
+            case 2:
+                ft.replace(R.id.main_frame, notice);
+                ft.commit();
+                break;
+            case 3:
+                ft.replace(R.id.main_frame, myfage);
+                ft.commit();
+                break;
+        }
+>>>>>>> 11b480b41a237084994d360ec930a258be9fa969
     }
 }
