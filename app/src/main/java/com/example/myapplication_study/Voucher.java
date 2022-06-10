@@ -25,12 +25,8 @@ public class Voucher extends Fragment {
     }
 
     @Override
-<<<<<<< HEAD
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-=======
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
->>>>>>> d2da87ed0e188cfdb49edae166fd3b83eb5f42dd
+
         View v = inflater.inflate(R.layout.activity_voucher, container, false);
 
         gr_voucher = v.findViewById(R.id.gr_voucher);

@@ -27,11 +27,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-<<<<<<< HEAD
             tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
-=======
-            tools:ignore="SpeakableTextPresentCheck" />
->>>>>>> d2da87ed0e188cfdb49edae166fd3b83eb5f42dd
     </LinearLayout>
 
     <FrameLayout
