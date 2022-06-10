@@ -23,5 +23,8 @@
         android:enabled="true"
         android:title="마이페이지"
         android:icon="@drawable/myfage"></item>
+<<<<<<< HEAD
 
+=======
+>>>>>>> d2da87ed0e188cfdb49edae166fd3b83eb5f42dd
 </menu>

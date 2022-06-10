@@ -27,9 +27,13 @@
             android:layout_marginBottom="10dp"
             android:hint="아이디를 입력하세요"
             android:inputType="textCapWords"
+<<<<<<< HEAD
             android:minHeight="48dp"
             android:padding="10dp"
             android:textColorHint="#757575" />
+=======
+            android:padding="10dp" />
+>>>>>>> d2da87ed0e188cfdb49edae166fd3b83eb5f42dd
 
         <EditText
             android:layout_width="fill_parent"
@@ -37,9 +41,13 @@
             android:layout_marginBottom="10dp"
             android:hint="패스워드를 입력하세요"
             android:inputType="textEmailAddress"
+<<<<<<< HEAD
             android:minHeight="48dp"
             android:padding="10dp"
             android:textColorHint="#757575" />
+=======
+            android:padding="10dp" />
+>>>>>>> d2da87ed0e188cfdb49edae166fd3b83eb5f42dd
 
         <EditText
             android:layout_width="fill_parent"
@@ -47,9 +55,13 @@
             android:layout_marginBottom="10dp"
             android:hint="이름을 입력하세요"
             android:inputType="textEmailAddress"
+<<<<<<< HEAD
             android:minHeight="48dp"
             android:padding="10dp"
             android:textColorHint="#757575" />
+=======
+            android:padding="10dp" />
+>>>>>>> d2da87ed0e188cfdb49edae166fd3b83eb5f42dd
 
         <EditText
             android:layout_width="fill_parent"
@@ -57,9 +69,13 @@
             android:layout_marginBottom="10dp"
             android:hint="생년월일을 입력하세요"
             android:inputType="textEmailAddress"
+<<<<<<< HEAD
             android:padding="10dp"
             android:textColorHint="#757575"
             tools:ignore="TouchTargetSizeCheck" />
+=======
+            android:padding="10dp" />
+>>>>>>> d2da87ed0e188cfdb49edae166fd3b83eb5f42dd
 
         <EditText
             android:layout_width="fill_parent"
@@ -67,9 +83,13 @@
             android:layout_marginBottom="10dp"
             android:hint="전화번호를 입력하세요"
             android:inputType="textEmailAddress"
+<<<<<<< HEAD
             android:minHeight="48dp"
             android:padding="10dp"
             android:textColorHint="#757575" />
+=======
+            android:padding="10dp" />
+>>>>>>> d2da87ed0e188cfdb49edae166fd3b83eb5f42dd
 
         <EditText
             android:layout_width="fill_parent"
@@ -77,9 +97,13 @@
             android:layout_marginBottom="10dp"
             android:hint="이메일을 입력하세요"
             android:inputType="textEmailAddress"
+<<<<<<< HEAD
             android:minHeight="48dp"
             android:padding="10dp"
             android:textColorHint="#757575" />
+=======
+            android:padding="10dp" />
+>>>>>>> d2da87ed0e188cfdb49edae166fd3b83eb5f42dd
 
         <Button
             android:id="@+id/complete_save_user_sign"
@@ -88,7 +112,11 @@
             android:layout_marginTop="20dip"
             android:background="#ea4c88"
             android:text="완료"
+<<<<<<< HEAD
             android:textColor="#212121" />
+=======
+            android:textColor="@color/white" />
+>>>>>>> d2da87ed0e188cfdb49edae166fd3b83eb5f42dd
     </LinearLayout>
 
 
