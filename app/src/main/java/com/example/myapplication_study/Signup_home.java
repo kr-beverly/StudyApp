@@ -16,13 +16,14 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class Signup_home extends AppCompatActivity {
     private Button sign_btn_logout;
 
-    private BottomNavigationView signbottomNavigationView;
-    private FragmentManager signfm;
-    private FragmentTransaction signft;
-    private Reservation signreservation;
-    private Voucher signvoucher;
-    private Notice signnotice;
-    private Myfage signmyfage;
+    private BottomNavigationView sign_bottomNavigationView;
+    private FragmentManager sign_fm;
+    private FragmentTransaction sign_ft;
+
+    private Sign_Reservation sign_reservation;
+    private Sign_Voucher sign_voucher;
+    private Sign_Notice sign_notice;
+    private Sign_Myfage sign_myfage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +39,8 @@ public class Signup_home extends AppCompatActivity {
             }
         });
 
-        signbottomNavigationView = findViewById(R.id.sign_bottomNavi);
-        signbottomNavigationView.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
+        sign_bottomNavigationView = findViewById(R.id.sign_bottomNavi);
+        sign_bottomNavigationView.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuitem) {
                 switch (menuitem.getItemId()) {
@@ -59,33 +60,33 @@ public class Signup_home extends AppCompatActivity {
                 return true;
             }
         });
-        signreservation = new Reservation();
-        signvoucher = new Voucher();
-        signnotice = new Notice();
-        signmyfage = new Myfage();
-        setFrag(1);
+        sign_reservation = new Sign_Reservation();
+        sign_voucher = new Sign_Voucher();
+        sign_notice = new Sign_Notice();
+        sign_myfage = new Sign_Myfage();
+        setFrag(0);
     }
 
     private void setFrag (int n) {
-        signfm = getSupportFragmentManager();
-        signft = signfm.beginTransaction();
+        sign_fm = getSupportFragmentManager();
+        sign_ft = sign_fm.beginTransaction();
 
         switch (n) {
             case 0:
-                signft.replace(R.id.sign_main_frame, signreservation);
-                signft.commit();
+                sign_ft.replace(R.id.sign_main_frame, sign_reservation);
+                sign_ft.commit();
                 break;
             case 1:
-                signft.replace(R.id.sign_main_frame, signvoucher);
-                signft.commit();
+                sign_ft.replace(R.id.sign_main_frame, sign_voucher);
+                sign_ft.commit();
                 break;
             case 2:
-                signft.replace(R.id.sign_main_frame, signnotice);
-                signft.commit();
+                sign_ft.replace(R.id.sign_main_frame, sign_notice);
+                sign_ft.commit();
                 break;
             case 3:
-                signft.replace(R.id.sign_main_frame, signmyfage);
-                signft.commit();
+                sign_ft.replace(R.id.sign_main_frame, sign_myfage);
+                sign_ft.commit();
         }
     }
 }
