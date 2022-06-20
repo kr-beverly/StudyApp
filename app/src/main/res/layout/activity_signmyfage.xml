@@ -4,12 +4,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Myfage">
+    tools:context=".Myfage"
+    android:orientation="vertical">
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="로그인 후 마이페이지"
-        android:textSize="30dp"/>
+        android:layout_height="wrap_content">    </ScrollView>
+        <CheckBox
+            android:id="@+id/ch_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="회원 탈퇴" />
+
+        <TextView
+            android:id="@+id/ch_text_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:text="탈퇴 사유"
+            android:textSize="20dp"></TextView>
+        <RadioGroup
+            android:id="@+id/gr_quit"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/quit_1"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="탈퇴 사유 1"></RadioButton>
+
+            <RadioButton
+                android:id="@+id/quit_2"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="탈퇴 사유 2"></RadioButton>
+
+            <RadioButton
+                android:id="@+id/quit_3"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="탈퇴 사유 3"></RadioButton>
+            <RadioButton
+                android:id="@+id/quit_4"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="탈퇴 사유 4"></RadioButton>
+            <EditText
+            android:visibility="invisible"
+            android:id="@+id/etc_quit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="기타"></EditText>
+            <Button
+                android:id="@+id/quit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="탈퇴"></Button>
+        </RadioGroup>
 
 </LinearLayout>

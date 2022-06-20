@@ -4,18 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Notice">
+    android:orientation="vertical"
+    tools:context=".Sign_Notice">
 
     <ListView
-        android:id="@+id/listView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/sign_listView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
         android:layout_weight="1" />
 
     <Button
-        android:id="@+id/sign_noticebtn"
+        android:id="@+id/sign_notice_write_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="end"
         android:text="새 글 작성하기"
         android:textColor="#FFFFFF" />
 

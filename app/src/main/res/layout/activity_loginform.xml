@@ -35,7 +35,7 @@
             android:id="@+id/password"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="20dp"
             android:hint="Password"
             android:imeOptions="actionDone"
             android:importantForAutofill="no"
@@ -43,6 +43,13 @@
             android:textColorHint="#000000"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="223dp" />
+
+        <CheckBox
+            android:id="@+id/login_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="로그인 정보 기억하기" />
 
         //Sign in 버튼 눌린 후 home으로 넘어가야 함
         <Button
@@ -78,6 +85,5 @@
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="479dp"
             android:layout_gravity="center"/>
-
     </LinearLayout>
 </LinearLayout>
