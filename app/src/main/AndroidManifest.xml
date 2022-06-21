@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication_study.NoActionBar">
         <activity
+            android:name=".Buy_Voucher"
+            android:exported="false" />
+        <activity
+            android:name=".My_Voucher"
+            android:exported="false" />
+        <activity
+            android:name=".UserInfo"
+            android:exported="false" />
+        <activity
             android:name=".Comment"
             android:exported="false" />
         <activity

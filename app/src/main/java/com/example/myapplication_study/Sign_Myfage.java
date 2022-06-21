@@ -35,6 +35,24 @@ public class Sign_Myfage extends Fragment {
         EditText etc_quit = view.findViewById(R.id.etc_quit);
         Button quit_btn = view.findViewById(R.id.quit_btn);
 
+        Button show_myVoucher = view.findViewById(R.id.show_myVoucher);
+        show_myVoucher.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), My_Voucher.class);
+                startActivity(intent);
+            }
+        });
+
+        Button ch_myinfo = view.findViewById(R.id.ch_myinfo);
+        ch_myinfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), UserInfo.class);
+                startActivity(intent);
+            }
+        });
+
         ch_box.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
