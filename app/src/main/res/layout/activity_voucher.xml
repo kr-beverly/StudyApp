@@ -69,31 +69,31 @@
                 android:id="@+id/voucher_day_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/action_voucher_day_2" />
+                android:text="2시간            3,000원" />
 
             <RadioButton
                 android:id="@+id/voucher_day_4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/action_voucher_day_4" />
+                android:text= "4시간            6,000원" />
 
             <RadioButton
                 android:id="@+id/voucher_day_6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/action_voucher_day_6" />
+                android:text="6시간            7,000원" />
 
             <RadioButton
                 android:id="@+id/voucher_day_8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/action_voucher_day_8" />
+                android:text="8시간            8,000원" />
 
             <RadioButton
                 android:id="@+id/voucher_day_12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/action_voucher_day_12" />
+                android:text="12시간         10,000원" />
         </RadioGroup>
 
         <RadioGroup
@@ -109,25 +109,25 @@
                 android:id="@+id/voucher_time_30"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/action_voucher_time_30" />
+                android:text="30시간           45,000원" />
 
             <RadioButton
                 android:id="@+id/voucher_time_50"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/action_voucher_time_50" />
+                android:text="50시간           70,000원" />
 
             <RadioButton
                 android:id="@+id/voucher_time_100"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/action_voucher_time_100" />
+                android:text="100시간         110,000원" />
 
             <RadioButton
                 android:id="@+id/voucher_time_200"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/action_voucher_time_200" />
+                android:text="200시간         200,000원" />
         </RadioGroup>
 
         <RadioGroup
@@ -143,19 +143,19 @@
                 android:id="@+id/voucher_group4_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/action_voucher_group4_2" />
+                android:text="2시간           12,000원" />
 
             <RadioButton
                 android:id="@+id/voucher_group4_4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/action_voucher_group4_4" />
+                android:text="4시간           15,000원" />
 
             <RadioButton
                 android:id="@+id/voucher_group4_6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/action_voucher_group4_6" />
+                android:text="6시간           20,000원" />
         </RadioGroup>
 
         <RadioGroup
@@ -171,19 +171,19 @@
                 android:id="@+id/voucher_group6_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/action_voucher_group6_2" />
+                android:text="2시간           18,000원" />
 
             <RadioButton
                 android:id="@+id/voucher_group6_4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/action_voucher_group6_4" />
+                android:text="4시간           20,000원" />
 
             <RadioButton
                 android:id="@+id/voucher_group6_6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/action_voucher_group6_6" />
+                android:text="6시간           25,000원" />
         </RadioGroup>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>
