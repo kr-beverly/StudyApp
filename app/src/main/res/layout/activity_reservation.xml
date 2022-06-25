@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".Reservation">
 
+
     <HorizontalScrollView
         android:layout_width="wrap_content"
         android:layout_height="match_parent">
@@ -24,7 +25,7 @@
                 tools:ignore="MissingConstraints" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/seat_1"
+                android:id="@+id/seat_01"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="87dp"
@@ -36,7 +37,7 @@
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/seat_2"
+                android:id="@+id/seat_02"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="117dp"
@@ -48,7 +49,7 @@
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/seat_3"
+                android:id="@+id/seat_03"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="147dp"
@@ -60,7 +61,7 @@
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/seat_4"
+                android:id="@+id/seat_04"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="179dp"
@@ -72,7 +73,7 @@
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/seat_5"
+                android:id="@+id/seat_05"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="210dp"
@@ -84,7 +85,7 @@
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/seat_6"
+                android:id="@+id/seat_06"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="242dp"
@@ -96,7 +97,7 @@
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/seat_7"
+                android:id="@+id/seat_07"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="272dp"
@@ -108,7 +109,7 @@
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/seat_8"
+                android:id="@+id/seat_08"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="304dp"
@@ -120,7 +121,7 @@
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/seat_9"
+                android:id="@+id/seat_09"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="335dp"
