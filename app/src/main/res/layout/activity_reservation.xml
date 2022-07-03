@@ -25,12 +25,8 @@
                 tools:ignore="MissingConstraints" />
 
             <androidx.appcompat.widget.AppCompatButton
-<<<<<<< HEAD
                 android:onClick="reservation"
-                android:id="@+id/seat_1"
-=======
                 android:id="@+id/seat_01"
->>>>>>> e3b7196c558cab6fa258ab4e52306db63c4aad2a
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="87dp"
@@ -42,12 +38,8 @@
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
 
             <androidx.appcompat.widget.AppCompatButton
-<<<<<<< HEAD
                 android:onClick="reservation"
-                android:id="@+id/seat_2"
-=======
                 android:id="@+id/seat_02"
->>>>>>> e3b7196c558cab6fa258ab4e52306db63c4aad2a
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="117dp"
@@ -59,12 +51,8 @@
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
 
             <androidx.appcompat.widget.AppCompatButton
-<<<<<<< HEAD
                 android:onClick="reservation"
-                android:id="@+id/seat_3"
-=======
                 android:id="@+id/seat_03"
->>>>>>> e3b7196c558cab6fa258ab4e52306db63c4aad2a
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="147dp"

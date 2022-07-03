@@ -19,24 +19,14 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Objects;
-<<<<<<< HEAD
 
 public class Reservation extends Fragment {
     private Object Reservation;
-    Button seat_1, seat_2, seat_3, seat_4, seat_5, seat_6, seat_7, seat_8, seat_9, seat_10,
+    Button seat_01, seat_02, seat_03, seat_04, seat_05, seat_06, seat_07, seat_08, seat_09, seat_10,
             seat_11, seat_12, seat_13, seat_14, seat_15, seat_16, seat_17, seat_18,
             seat_19, seat_20, seat_21, seat_22, seat_23, seat_24, seat_25, seat_26,
             seat_27, seat_28, seat_29, seat_30, seat_31, seat_32, seat_33, seat_34,
             seat_35, seat_36, seat_37, seat_38, seat_39, seat_40;
-
-    Button[] numButtons = new Button[40];
-    Integer[] numBtnIDs = {R.id.seat_1,R.id.seat_2,R.id.seat_3,R.id.seat_4,R.id.seat_5,R.id.seat_6,R.id.seat_7,R.id.seat_8,R.id.seat_9,R.id.seat_10,
-            R.id.seat_11,R.id.seat_12,R.id.seat_13,R.id.seat_14,
-            R.id.seat_15,R.id.seat_16,R.id.seat_17,R.id.seat_18,
-            R.id.seat_19,R.id.seat_20,R.id.seat_21,R.id.seat_22,
-            R.id.seat_23,R.id.seat_24,R.id.seat_25,R.id.seat_26,
-            R.id.seat_27,R.id.seat_28,R.id.seat_29,R.id.seat_30,R.id.seat_31,R.id.seat_32,
-            R.id.seat_33,R.id.seat_34,R.id.seat_35,R.id.seat_36,R.id.seat_37,R.id.seat_38};
 
     @NonNull
     @Override
@@ -44,75 +34,75 @@ public class Reservation extends Fragment {
                              @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_reservation, container, false);
 
-        seat_1 = view.findViewById(R.id.seat_1);
-        seat_1.setOnClickListener(new View.OnClickListener() {
+        seat_01 = view.findViewById(R.id.seat_01);
+        seat_01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Reservation_page.class);
+                Intent intent = new Intent(getActivity(), loginfrom.class);
                 startActivity(intent);
             }
         });
-        seat_2 = view.findViewById(R.id.seat_2);
-        seat_2.setOnClickListener(new View.OnClickListener() {
+        seat_02 = view.findViewById(R.id.seat_02);
+        seat_02.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Reservation_page.class);
+                Intent intent = new Intent(getActivity(), loginfrom.class);
                 startActivity(intent);
             }
         });
-        seat_3 = view.findViewById(R.id.seat_3);
-        seat_3.setOnClickListener(new View.OnClickListener() {
+        seat_03 = view.findViewById(R.id.seat_03);
+        seat_03.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Reservation_page.class);
+                Intent intent = new Intent(getActivity(), loginfrom.class);
                 startActivity(intent);
             }
         });
-        seat_4 = view.findViewById(R.id.seat_4);
-        seat_4.setOnClickListener(new View.OnClickListener() {
+        seat_04 = view.findViewById(R.id.seat_04);
+        seat_04.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Reservation_page.class);
+                Intent intent = new Intent(getActivity(), loginfrom.class);
                 startActivity(intent);
             }
         });
-        seat_5 = view.findViewById(R.id.seat_5);
-        seat_5.setOnClickListener(new View.OnClickListener() {
+        seat_05 = view.findViewById(R.id.seat_05);
+        seat_05.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Reservation_page.class);
+                Intent intent = new Intent(getActivity(), loginfrom.class);
                 startActivity(intent);
             }
         });
-        seat_6 = view.findViewById(R.id.seat_6);
-        seat_6.setOnClickListener(new View.OnClickListener() {
+        seat_06 = view.findViewById(R.id.seat_06);
+        seat_06.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Reservation_page.class);
+                Intent intent = new Intent(getActivity(), loginfrom.class);
                 startActivity(intent);
             }
         });
-        seat_7 = view.findViewById(R.id.seat_7);
-        seat_7.setOnClickListener(new View.OnClickListener() {
+        seat_07 = view.findViewById(R.id.seat_07);
+        seat_07.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Reservation_page.class);
+                Intent intent = new Intent(getActivity(), loginfrom.class);
                 startActivity(intent);
             }
         });
-        seat_8 = view.findViewById(R.id.seat_8);
-        seat_8.setOnClickListener(new View.OnClickListener() {
+        seat_08 = view.findViewById(R.id.seat_08);
+        seat_08.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Reservation_page.class);
+                Intent intent = new Intent(getActivity(), loginfrom.class);
                 startActivity(intent);
             }
         });
-        seat_9 = view.findViewById(R.id.seat_9);
-        seat_9.setOnClickListener(new View.OnClickListener() {
+        seat_09 = view.findViewById(R.id.seat_09);
+        seat_09.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Reservation_page.class);
+                Intent intent = new Intent(getActivity(), loginfrom.class);
                 startActivity(intent);
             }
         });
@@ -121,7 +111,7 @@ public class Reservation extends Fragment {
         seat_10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Reservation_page.class);
+                Intent intent = new Intent(getActivity(), loginfrom.class);
                 startActivity(intent);
             }
         });
@@ -129,7 +119,7 @@ public class Reservation extends Fragment {
         seat_11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Reservation_page.class);
+                Intent intent = new Intent(getActivity(), loginfrom.class);
                 startActivity(intent);
             }
         });
@@ -137,7 +127,7 @@ public class Reservation extends Fragment {
         seat_12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Reservation_page.class);
+                Intent intent = new Intent(getActivity(), loginfrom.class);
                 startActivity(intent);
             }
         });
@@ -145,7 +135,7 @@ public class Reservation extends Fragment {
         seat_13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Reservation_page.class);
+                Intent intent = new Intent(getActivity(), loginfrom.class);
                 startActivity(intent);
             }
         });
@@ -153,7 +143,7 @@ public class Reservation extends Fragment {
         seat_14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Reservation_page.class);
+                Intent intent = new Intent(getActivity(), loginfrom.class);
                 startActivity(intent);
             }
         });
@@ -161,7 +151,7 @@ public class Reservation extends Fragment {
         seat_15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Reservation_page.class);
+                Intent intent = new Intent(getActivity(), loginfrom.class);
                 startActivity(intent);
             }
         });
@@ -169,7 +159,7 @@ public class Reservation extends Fragment {
         seat_16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Reservation_page.class);
+                Intent intent = new Intent(getActivity(), loginfrom.class);
                 startActivity(intent);
             }
         });
@@ -177,7 +167,7 @@ public class Reservation extends Fragment {
         seat_17.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Reservation_page.class);
+                Intent intent = new Intent(getActivity(), loginfrom.class);
                 startActivity(intent);
             }
         });
@@ -185,7 +175,7 @@ public class Reservation extends Fragment {
         seat_18.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Reservation_page.class);
+                Intent intent = new Intent(getActivity(), loginfrom.class);
                 startActivity(intent);
             }
         });
@@ -193,7 +183,7 @@ public class Reservation extends Fragment {
         seat_19.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Reservation_page.class);
+                Intent intent = new Intent(getActivity(), loginfrom.class);
                 startActivity(intent);
             }
         });
@@ -202,7 +192,7 @@ public class Reservation extends Fragment {
         seat_20.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Reservation_page.class);
+                Intent intent = new Intent(getActivity(), loginfrom.class);
                 startActivity(intent);
             }
         });
@@ -210,7 +200,7 @@ public class Reservation extends Fragment {
         seat_21.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Reservation_page.class);
+                Intent intent = new Intent(getActivity(), loginfrom.class);
                 startActivity(intent);
             }
         });
@@ -218,7 +208,7 @@ public class Reservation extends Fragment {
         seat_22.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Reservation_page.class);
+                Intent intent = new Intent(getActivity(), loginfrom.class);
                 startActivity(intent);
             }
         });
@@ -226,7 +216,7 @@ public class Reservation extends Fragment {
         seat_23.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Reservation_page.class);
+                Intent intent = new Intent(getActivity(), loginfrom.class);
                 startActivity(intent);
             }
         });
@@ -234,7 +224,7 @@ public class Reservation extends Fragment {
         seat_24.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Reservation_page.class);
+                Intent intent = new Intent(getActivity(), loginfrom.class);
                 startActivity(intent);
             }
         });
@@ -242,7 +232,7 @@ public class Reservation extends Fragment {
         seat_25.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Reservation_page.class);
+                Intent intent = new Intent(getActivity(), loginfrom.class);
                 startActivity(intent);
             }
         });
@@ -250,7 +240,7 @@ public class Reservation extends Fragment {
         seat_26.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Reservation_page.class);
+                Intent intent = new Intent(getActivity(), loginfrom.class);
                 startActivity(intent);
             }
         });
@@ -258,7 +248,7 @@ public class Reservation extends Fragment {
         seat_27.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Reservation_page.class);
+                Intent intent = new Intent(getActivity(), loginfrom.class);
                 startActivity(intent);
             }
         });
@@ -266,7 +256,7 @@ public class Reservation extends Fragment {
         seat_28.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Reservation_page.class);
+                Intent intent = new Intent(getActivity(), loginfrom.class);
                 startActivity(intent);
             }
         });
@@ -274,7 +264,7 @@ public class Reservation extends Fragment {
         seat_29.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Reservation_page.class);
+                Intent intent = new Intent(getActivity(), loginfrom.class);
                 startActivity(intent);
             }
         });
@@ -283,7 +273,7 @@ public class Reservation extends Fragment {
         seat_30.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Reservation_page.class);
+                Intent intent = new Intent(getActivity(), loginfrom.class);
                 startActivity(intent);
             }
         });
@@ -291,7 +281,7 @@ public class Reservation extends Fragment {
         seat_31.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Reservation_page.class);
+                Intent intent = new Intent(getActivity(), loginfrom.class);
                 startActivity(intent);
             }
         });
@@ -367,69 +357,7 @@ public class Reservation extends Fragment {
                 startActivity(intent);
             }
         });
-=======
 
-public class Reservation extends Fragment {
-    View view;
-    Button seat[] = new Button[38];
-    Integer[] Rid_seat = {R.id.seat_01,R.id.seat_02,R.id.seat_03,R.id.seat_04,R.id.seat_05,
-                        R.id.seat_06,R.id.seat_07,R.id.seat_08,R.id.seat_09,R.id.seat_10,
-                        R.id.seat_11,R.id.seat_12,R.id.seat_13,R.id.seat_14,R.id.seat_15,
-                        R.id.seat_16,R.id.seat_17,R.id.seat_18,R.id.seat_19,R.id.seat_20,
-                        R.id.seat_21,R.id.seat_22,R.id.seat_23,R.id.seat_24,R.id.seat_25,
-                        R.id.seat_26,R.id.seat_27,R.id.seat_28,R.id.seat_29,R.id.seat_30,
-                        R.id.seat_31,R.id.seat_32,R.id.seat_33,R.id.seat_34,R.id.seat_35,
-                        R.id.seat_36,R.id.seat_37,R.id.seat_38};
-    ArrayList<String> mDataList;
-
-    @NonNull
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.activity_reservation, container, false);
-
-
-
-        for (int i = 0; i < 38; i++) {
-            seat[i] = (Button) view.findViewById(Rid_seat[i]);
-        }
-
-        for(int i=0; i<seat.length; i++){
-            final int INDEX;
-            INDEX = i;
-            seat[INDEX].setOnClickListener(v -> {
-                class MyListener implements View.OnClickListener {
-                    @Override
-                    public void onClick(View view) {
-                        androidx.appcompat.app.AlertDialog.Builder alert = new androidx.appcompat.app.AlertDialog.Builder(getActivity());
-                        alert.setTitle("예약 확정");
-
-                        SimpleDateFormat format = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
-                        String date = format.format(Calendar.getInstance().getTime());
-                        alert.setMessage(date);
-                        alert.setMessage(date + "\n" + "예약을 확정하시겠습니까?");
-
-                        alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int ok) {
-                                Toast.makeText(getContext().getApplicationContext(), "예약 확정되었습니다.", Toast.LENGTH_SHORT).show();
-                            }
-                        });
-
-                        alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int cancel) {
-                                Toast.makeText(getContext().getApplicationContext(), "Cancel", Toast.LENGTH_SHORT).show();
-                            }
-                        });
-
-                        alert.show();
-                    }
-                }
-            });
-        }
-
->>>>>>> e3b7196c558cab6fa258ab4e52306db63c4aad2a
         return view;
     }
 
