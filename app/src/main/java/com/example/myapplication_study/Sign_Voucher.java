@@ -2,17 +2,24 @@ package com.example.myapplication_study;
 
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.MultiFormatWriter;
+import com.google.zxing.common.BitMatrix;
+import com.journeyapps.barcodescanner.BarcodeEncoder;
 
 
 public class Sign_Voucher extends Fragment {
@@ -33,7 +40,27 @@ public class Sign_Voucher extends Fragment {
             }
         });
 
+        ImageView qrcode;
+        qrcode = (ImageView)view.findViewById(R.id.qrcode) ;
+
+        // TODO : QR코드를 읽었을떄, 문자열값
+        String value = "https://www.naver.com";
+        // ex : 01063313034
+        // ex : 300,000,000
+        createQRcode(qrcode, value);
+
         return view;
     }
 
+    public void createQRcode(ImageView img, String text) {
+
+        MultiFormatWriter multiFormatWriter = new MultiFormatWriter();
+        try {
+            BitMatrix bitMatrix = multiFormatWriter.encode(text, BarcodeFormat.QR_CODE, 200, 200);
+            BarcodeEncoder barcodeEncoder = new BarcodeEncoder();
+            Bitmap bitmap = barcodeEncoder.createBitmap(bitMatrix);
+            img.setImageBitmap(bitmap);
+        } catch (Exception e) {
+        }
+    }
 }

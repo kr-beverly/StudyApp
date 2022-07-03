@@ -4,11 +4,15 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication_study.NoActionBar">
+        <activity
+            android:name=".Reservation_page"
+            android:exported="false" />
         <activity
             android:name=".Buy_Voucher"
             android:exported="false" />

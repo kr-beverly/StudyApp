@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Buy_Voucher">
 
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
@@ -180,5 +181,16 @@
                 android:layout_height="wrap_content"
                 android:text="6시간           25,000원" />
         </RadioGroup>
+
+    <Button
+        android:id="@+id/vocher_purchase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:text="구매하기"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gr_voucher_day"></Button>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

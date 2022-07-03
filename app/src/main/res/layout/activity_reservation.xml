@@ -24,6 +24,7 @@
                 tools:ignore="MissingConstraints" />
 
             <androidx.appcompat.widget.AppCompatButton
+                android:onClick="reservation"
                 android:id="@+id/seat_1"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
@@ -36,6 +37,7 @@
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
 
             <androidx.appcompat.widget.AppCompatButton
+                android:onClick="reservation"
                 android:id="@+id/seat_2"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
@@ -48,6 +50,7 @@
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
 
             <androidx.appcompat.widget.AppCompatButton
+                android:onClick="reservation"
                 android:id="@+id/seat_3"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
@@ -476,6 +479,29 @@
                 android:background="@android:color/white"
                 android:backgroundTint="@color/white"
                 android:text="38"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/seat_39"
+                android:layout_width="114dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="236dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="Study Room 1"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/seat_40"
+                android:layout_width="114dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="292dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="Study Room 2"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
     </androidx.constraintlayout.widget.ConstraintLayout>

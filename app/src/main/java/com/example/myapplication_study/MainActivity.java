@@ -44,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.reservation:
-                        setFrag(0);
-                        break;
+                       setFrag(0);
+                      break;
                     case R.id.voucher:
                         setFrag(1);
                         break;
