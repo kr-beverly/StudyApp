@@ -1,15 +1,24 @@
 package com.example.myapplication_study;
 
+import android.app.AlertDialog;
+import android.app.TimePickerDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextClock;
+import android.widget.TextView;
+import android.widget.TimePicker;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import java.util.Objects;
 
 public class Sign_Reservation extends Fragment {
     private View view;
@@ -17,6 +26,9 @@ public class Sign_Reservation extends Fragment {
             sign_seat_11, sign_seat_12, sign_seat_13, sign_seat_14, sign_seat_15, sign_seat_16, sign_seat_17, sign_seat_18, sign_seat_19, sign_seat_20,
             sign_seat_21, sign_seat_22, sign_seat_23, sign_seat_24, sign_seat_25, sign_seat_26, sign_seat_27, sign_seat_28, sign_seat_29, sign_seat_30,
             sign_seat_31, sign_seat_32, sign_seat_33, sign_seat_34, sign_seat_35, sign_seat_36, sign_seat_37, sign_seat_38, sign_seat_39,  sign_seat_40;
+    TimePickerDialog timePickerDialog;
+    TextView textView;
+    TextClock textClock;
 
     @Nullable
     @Override
@@ -27,10 +39,19 @@ public class Sign_Reservation extends Fragment {
         sign_seat_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Reservation_page.class);
-                startActivity(intent);
+                Context mContext = requireActivity().getApplicationContext();
+                LayoutInflater inflater1 = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+                View layout = inflater1.inflate(R.layout.activity_reservation_page, (ViewGroup) view.findViewById(R.id.reservation_popup));
+                AlertDialog.Builder aDialog = new AlertDialog.Builder(getActivity());
+
+                aDialog.setView(layout);
+
+                AlertDialog ad = aDialog.create();
+                ad.show();
             }
         });
+
         sign_seat_2 = view.findViewById(R.id.sign_seat_2);
         sign_seat_2.setOnClickListener(new View.OnClickListener() {
             @Override
