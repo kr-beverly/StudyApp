@@ -6,34 +6,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Reservation_page">
+    tools:context=".Reservation_page">'
 
-    <TextView
+    <EditText
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="30분 전부터 예약 가능합니다"
+        android:layout_marginTop="8dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:text="."
         android:textAlignment="center"
         android:textSize="25dp"
-        tools:ignore="MissingConstraints"></TextView>
-
-    <TimePicker
-        android:id="@+id/timePicker"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:timePickerMode="spinner"
-        app:layout_constraintBottom_toTopOf="@+id/revervation_button"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        tools:layout_editor_absoluteX="-16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/revervation_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="예약 확정"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/timePicker"></Button>
+        app:layout_constraintTop_toBottomOf="@+id/textView2"></Button>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

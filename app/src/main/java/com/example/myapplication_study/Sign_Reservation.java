@@ -1,18 +1,25 @@
 package com.example.myapplication_study;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.TextClock;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import java.util.Calendar;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -26,9 +33,8 @@ public class Sign_Reservation extends Fragment {
             sign_seat_11, sign_seat_12, sign_seat_13, sign_seat_14, sign_seat_15, sign_seat_16, sign_seat_17, sign_seat_18, sign_seat_19, sign_seat_20,
             sign_seat_21, sign_seat_22, sign_seat_23, sign_seat_24, sign_seat_25, sign_seat_26, sign_seat_27, sign_seat_28, sign_seat_29, sign_seat_30,
             sign_seat_31, sign_seat_32, sign_seat_33, sign_seat_34, sign_seat_35, sign_seat_36, sign_seat_37, sign_seat_38, sign_seat_39,  sign_seat_40;
-    TimePickerDialog timePickerDialog;
-    TextView textView;
-    TextClock textClock;
+
+    EditText textView2;
 
     @Nullable
     @Override
@@ -36,21 +42,64 @@ public class Sign_Reservation extends Fragment {
         view = inflater.inflate(R.layout.activity_signreservation, container, false);
 
         sign_seat_1 = view.findViewById(R.id.sign_seat_1);
+        textView2 = view.findViewById(R.id.textView2);
+
         sign_seat_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Context mContext = requireActivity().getApplicationContext();
-                LayoutInflater inflater1 = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                final Calendar mcurrentTime = Calendar.getInstance();
+                int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
+                int minute = mcurrentTime.get(Calendar.MINUTE);
+                TimePickerDialog timePicker;
+                textView2 = new EditText(getActivity());
+                //timePicker 다이어로그
+                timePicker = new TimePickerDialog(getActivity(), new TimePickerDialog.OnTimeSetListener() {
+                    @Override
+                    public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
+                        textView2.setText(selectedHour+"시 "+selectedMinute+"분");
+                    }
+                }, hour, minute, false); // true의 경우 24시간 형식의 TimePicker 출현
+                timePicker.setTitle("30분 전부터 예약 가능합니다.");
+                timePicker.show();
 
-                View layout = inflater1.inflate(R.layout.activity_reservation_page, (ViewGroup) view.findViewById(R.id.reservation_popup));
-                AlertDialog.Builder aDialog = new AlertDialog.Builder(getActivity());
+                //팝업 생성
+                textView2.addTextChangedListener(new TextWatcher() {
+                    @Override
+                    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-                aDialog.setView(layout);
+                    }
 
-                AlertDialog ad = aDialog.create();
-                ad.show();
+                    @Override
+                    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable editable) {
+                        if (textView2.length() > 3) {
+                            Context mContext = requireActivity().getApplicationContext();
+                            LayoutInflater inflater1 = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+                            View layout = inflater1.inflate(R.layout.activity_reservation_page, (ViewGroup) view.findViewById(R.id.reservation_popup));
+                            AlertDialog.Builder aDialog = new AlertDialog.Builder(getActivity());
+                            aDialog.setView(layout);
+                            AlertDialog ad = aDialog.create();
+                            ad.show();
+
+                            //팝업창 크기설정
+                            WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+                            lp.copyFrom(ad.getWindow().getAttributes());
+                            lp.width = 800;
+                            lp.height = 400;
+                            Window window = ad.getWindow();
+                            window.setAttributes(lp);
+                        }
+                    }
+                });
             }
         });
+
+
 
         sign_seat_2 = view.findViewById(R.id.sign_seat_2);
         sign_seat_2.setOnClickListener(new View.OnClickListener() {
