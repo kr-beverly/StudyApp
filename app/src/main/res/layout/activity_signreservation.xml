@@ -25,7 +25,7 @@
                 tools:layout_editor_absoluteY="139dp" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/sign_seat_1"
+                android:id="@+id/sign_seat_01"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="87dp"
@@ -38,7 +38,7 @@
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/sign_seat_2"
+                android:id="@+id/sign_seat_02"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="117dp"
@@ -51,7 +51,7 @@
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/sign_seat_3"
+                android:id="@+id/sign_seat_03"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="147dp"
@@ -64,7 +64,7 @@
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/sign_seat_4"
+                android:id="@+id/sign_seat_04"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="179dp"
@@ -76,7 +76,7 @@
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/sign_seat_5"
+                android:id="@+id/sign_seat_05"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="210dp"
@@ -88,7 +88,7 @@
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/sign_seat_6"
+                android:id="@+id/sign_seat_06"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="242dp"
@@ -100,7 +100,7 @@
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/sign_seat_7"
+                android:id="@+id/sign_seat_07"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="272dp"
@@ -112,7 +112,7 @@
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/sign_seat_8"
+                android:id="@+id/sign_seat_08"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="304dp"
@@ -124,7 +124,7 @@
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/sign_seat_9"
+                android:id="@+id/sign_seat_09"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_marginStart="335dp"
