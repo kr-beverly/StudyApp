@@ -7,11 +7,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -84,7 +82,7 @@ public class My_Voucher extends AppCompatActivity {
 
         this.InitializeMyVoucher();
 
-        ListView listView = (ListView)findViewById(R.id.listView);
+        ListView listView = (ListView)findViewById(R.id.MyVoucherlistView);
         final MyAdapter myAdapter = new MyAdapter(this,myVoucherList);
 
         listView.setAdapter(myAdapter);
@@ -95,6 +93,6 @@ public class My_Voucher extends AppCompatActivity {
         myVoucherList = new ArrayList<My_Voucher_Data>();
 
         myVoucherList.add(new My_Voucher_Data("3시간","일일이용권"));
-        myVoucherList.add(new My_Voucher_Data("1시간","시간이용권"));
+        myVoucherList.add(new My_Voucher_Data("1시간","일일이용권"));
     }
 }

@@ -13,6 +13,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
     private Button btn_login;
+    private Button btn_manager_login;
 
     private BottomNavigationView bottomNavigationView;
     private FragmentManager fm;
@@ -34,6 +35,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, loginfrom.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_manager_login = findViewById(R.id.btn_manager_login);
+        btn_manager_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Manager_home.class);
                 startActivity(intent);
             }
         });

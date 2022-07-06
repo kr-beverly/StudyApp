@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".My_Voucher">
+    tools:context=".Manager_Userman">
 
     <ListView
-        android:id="@+id/MyVoucherlistView"
+        android:id="@+id/Userman_listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

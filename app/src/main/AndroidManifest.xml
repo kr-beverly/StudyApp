@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication_study.NoActionBar">
         <activity
+            android:name=".Manager_home"
+            android:exported="false"/>
+        <activity
             android:name=".Reservation_page"
             android:exported="false" />
         <activity
