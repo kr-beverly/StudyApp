@@ -21,8 +21,8 @@
                 android:layout_height="487dp"
                 android:src="@drawable/kakaotalk_20220617_151645507"
                 tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="43dp"
-                tools:layout_editor_absoluteY="139dp" />
+                tools:layout_editor_absoluteX="3dp"
+                tools:layout_editor_absoluteY="86dp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/sign_seat_01"
@@ -505,6 +505,16 @@
                 android:backgroundTint="@color/white"
                 android:text="Study Room 2"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <Button
+                android:id="@+id/check_seat_time"
+                android:layout_width="152dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="252dp"
+                android:layout_marginTop="44dp"
+                android:text="퇴실예정석"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </HorizontalScrollView>

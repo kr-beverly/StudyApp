@@ -27,13 +27,33 @@ public class Sign_Reservation extends Fragment {
             R.id.sign_seat_21, R.id.sign_seat_22, R.id.sign_seat_23, R.id.sign_seat_24, R.id.sign_seat_25, R.id.sign_seat_26, R.id.sign_seat_27, R.id.sign_seat_28, R.id.sign_seat_29, R.id.sign_seat_30,
             R.id.sign_seat_31, R.id.sign_seat_32, R.id.sign_seat_33, R.id.sign_seat_34, R.id.sign_seat_35, R.id.sign_seat_36, R.id.sign_seat_37, R.id.sign_seat_38, R.id.sign_seat_39, R.id.sign_seat_40};
     TextView textView;
+    Button check_seat_time;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.activity_signreservation, container, false);
 
+        check_seat_time = view.findViewById(R.id.check_seat_time);
         textView = view.findViewById(R.id.textView);
+
+        //수정중
+        check_seat_time.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setTitle("퇴실예정석");
+                builder.setMessage(" ");
+                builder.setPositiveButton("닫기", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.dismiss();
+                    }
+                });
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+            }
+        });
 
         for (int i = 0; i < 40; i++) {
             button[i] = view.findViewById(btnID[i]);

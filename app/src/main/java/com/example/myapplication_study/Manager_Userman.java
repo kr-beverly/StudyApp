@@ -107,8 +107,8 @@ public class Manager_Userman extends Fragment {
     private void ManagerUserman() {
         Manager_Userman_list = new ArrayList<Manager_Userman_Data>();
 
-        Manager_Userman_list.add(new Manager_Userman_Data("abc123", "qwer1234", "yejin", "3시간"));
-        Manager_Userman_list.add(new Manager_Userman_Data("abc123", "qwer1234", "yejin", "7시간"));
+        Manager_Userman_list.add(new Manager_Userman_Data("abc123", "qwer1234", "이름", "3시간"));
+        Manager_Userman_list.add(new Manager_Userman_Data("abc123", "qwer1234", "이름2", "7시간"));
     }
 
 }
