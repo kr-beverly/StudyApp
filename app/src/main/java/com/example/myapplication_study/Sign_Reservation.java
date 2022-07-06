@@ -71,7 +71,6 @@ public class Sign_Reservation extends Fragment {
                                         public void onClick(DialogInterface dialog, int id) {
                                             Toast.makeText(getContext(), button[finalI].getText().toString() + "번 좌석 " + textView.getText().toString() + " 예약 확정 되었습니다.", Toast.LENGTH_SHORT).show();
                                             dialog.dismiss();
-                                            button[finalI].setSelected(true);
                                         }
                                     });
                                     AlertDialog alertDialog = builder.create();
