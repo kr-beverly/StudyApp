@@ -89,6 +89,7 @@ public class My_Voucher extends AppCompatActivity {
 
     }
 
+    //임시 값
     private void InitializeMyVoucher() {
         myVoucherList = new ArrayList<My_Voucher_Data>();
 

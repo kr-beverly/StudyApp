@@ -14,9 +14,6 @@
             android:name=".Manager_home"
             android:exported="false"/>
         <activity
-            android:name=".Reservation_page"
-            android:exported="false" />
-        <activity
             android:name=".Buy_Voucher"
             android:exported="false" />
         <activity

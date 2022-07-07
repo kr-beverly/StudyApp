@@ -20,7 +20,7 @@ public class Manager_home extends AppCompatActivity {
     private FragmentManager sign_fm;
     private FragmentTransaction sign_ft;
 
-    private Manager_Voucher manager_voucher;
+    private Manager_Seat manager_seat;
     private Manager_Notice manager_notice;
     private Manager_Userman manager_userman;
 
@@ -43,7 +43,7 @@ public class Manager_home extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuitem) {
                 switch (menuitem.getItemId()) {
-                    case R.id.manager_voucher:
+                    case R.id.manager_seat:
                         setFrag(0);
                         break;
                     case R.id.manager_notice:
@@ -56,7 +56,7 @@ public class Manager_home extends AppCompatActivity {
                 return true;
             }
         });
-        manager_voucher = new Manager_Voucher();
+        manager_seat = new Manager_Seat();
         manager_notice = new Manager_Notice();
         manager_userman = new Manager_Userman();
         setFrag(0);
@@ -68,7 +68,7 @@ public class Manager_home extends AppCompatActivity {
 
         switch (n) {
             case 0:
-                sign_ft.replace(R.id.manager_main_frame, manager_voucher);
+                sign_ft.replace(R.id.manager_main_frame, manager_seat);
                 sign_ft.commit();
                 break;
             case 1:

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/manager_voucher"
+        android:id="@+id/manager_seat"
         android:enabled="true"
-        android:title="이용권"
+        android:title="좌석 관리"
         android:icon="@drawable/premium_icon_coupon_941056"></item>
 
     <item

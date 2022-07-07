@@ -36,7 +36,6 @@ public class Reservation extends Fragment {
 
         check_seat_time = view.findViewById(R.id.check_seat_time);
 
-        //수정중
         check_seat_time.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

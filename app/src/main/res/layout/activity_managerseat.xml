@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Manager_Seat">
+
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/reservation_view"
+                android:layout_width="403dp"
+                android:layout_height="487dp"
+                android:src="@drawable/kakaotalk_20220617_151645507"
+                tools:layout_editor_absoluteX="4dp"
+                tools:layout_editor_absoluteY="86dp"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:onClick="reservation"
+                android:id="@+id/manager_seat_01"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="87dp"
+                android:layout_marginTop="98dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="1"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:onClick="reservation"
+                android:id="@+id/manager_seat_02"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="117dp"
+                android:layout_marginTop="98dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="2"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:onClick="reservation"
+                android:id="@+id/manager_seat_03"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="147dp"
+                android:layout_marginTop="98dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="3"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_04"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="179dp"
+                android:layout_marginTop="98dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="4"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_05"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="210dp"
+                android:layout_marginTop="98dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="5"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_06"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="242dp"
+                android:layout_marginTop="98dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="6"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_07"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="272dp"
+                android:layout_marginTop="98dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="7"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_08"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="304dp"
+                android:layout_marginTop="98dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="8"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_09"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="335dp"
+                android:layout_marginTop="98dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="9"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_10"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="365dp"
+                android:layout_marginTop="98dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="10"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_11"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="167dp"
+                android:layout_marginTop="137dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="11"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_12"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="167dp"
+                android:layout_marginTop="158dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="12"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_13"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="188dp"
+                android:layout_marginTop="137dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="13"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_14"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="188dp"
+                android:layout_marginTop="158dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="14"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_15"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="228dp"
+                android:layout_marginTop="137dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="15"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_16"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="228dp"
+                android:layout_marginTop="158dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="16"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_17"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="250dp"
+                android:layout_marginTop="137dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="17"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_18"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="250dp"
+                android:layout_marginTop="158dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="18"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_19"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="228dp"
+                android:layout_marginTop="194dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="19"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_20"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="228dp"
+                android:layout_marginTop="215dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="20"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_21"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="250dp"
+                android:layout_marginTop="194dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="21"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_22"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="250dp"
+                android:layout_marginTop="215dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="22"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_23"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="229dp"
+                android:layout_marginTop="254dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="23"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_24"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="229dp"
+                android:layout_marginTop="275dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="24"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_25"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="251dp"
+                android:layout_marginTop="254dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="25"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_26"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="251dp"
+                android:layout_marginTop="275dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="26"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_27"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="294dp"
+                android:layout_marginTop="133dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="27"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_28"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="294dp"
+                android:layout_marginTop="154dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="28"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_29"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="294dp"
+                android:layout_marginTop="175dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="29"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_30"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="315dp"
+                android:layout_marginTop="133dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="30"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_31"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="315dp"
+                android:layout_marginTop="154dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="31"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_32"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="315dp"
+                android:layout_marginTop="175dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="32"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_33"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="294dp"
+                android:layout_marginTop="219dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="33"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_34"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="294dp"
+                android:layout_marginTop="240dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="34"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_35"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="294dp"
+                android:layout_marginTop="261dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="35"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_36"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="315dp"
+                android:layout_marginTop="219dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="36"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_37"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="315dp"
+                android:layout_marginTop="240dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="37"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_38"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="315dp"
+                android:layout_marginTop="261dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="38"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_39"
+                android:layout_width="114dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="236dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="Study Room 1"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/manager_seat_40"
+                android:layout_width="114dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="292dp"
+                android:background="@android:color/white"
+                android:backgroundTint="@color/white"
+                android:text="Study Room 2"
+                app:layout_constraintStart_toStartOf="@+id/reservation_view"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+
+            <Button
+                android:id="@+id/check_seat_time"
+                android:layout_width="152dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="252dp"
+                android:layout_marginTop="44dp"
+                android:text="퇴실예정석"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/reservation_view" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </HorizontalScrollView>
+</LinearLayout>
