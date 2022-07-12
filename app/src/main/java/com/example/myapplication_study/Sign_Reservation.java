@@ -11,7 +11,11 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -37,7 +41,6 @@ public class Sign_Reservation extends Fragment {
         check_seat_time = view.findViewById(R.id.check_seat_time);
         textView = view.findViewById(R.id.textView);
 
-        //수정중
         check_seat_time.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -71,6 +74,7 @@ public class Sign_Reservation extends Fragment {
                             int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
                             int minute = mcurrentTime.get(Calendar.MINUTE);
                             TimePickerDialog timePicker;
+
                             textView = new TextView(getActivity());
                             //timePicker 다이어로그
                             timePicker = new TimePickerDialog(getActivity(), new TimePickerDialog.OnTimeSetListener() {
@@ -81,7 +85,11 @@ public class Sign_Reservation extends Fragment {
                                         selectedHour -= 12;
                                         state = "오후";
                                     }
+
                                     textView.setText(state + " " + selectedHour + "시" + selectedMinute + "분");
+
+
+
                                     //확정 팝업
                                     AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                                     builder.setTitle(button[finalI].getText().toString() + "번 좌석");
@@ -91,6 +99,12 @@ public class Sign_Reservation extends Fragment {
                                         public void onClick(DialogInterface dialog, int id) {
                                             Toast.makeText(getContext(), button[finalI].getText().toString() + "번 좌석 " + textView.getText().toString() + " 예약 확정 되었습니다.", Toast.LENGTH_SHORT).show();
                                             dialog.dismiss();
+                                        }
+                                    });
+                                    builder.setNegativeButton("취소", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialogInterface, int i) {
+                                            Toast.makeText(getContext(),"취소되었습니다.", Toast.LENGTH_SHORT).show();
                                         }
                                     });
                                     AlertDialog alertDialog = builder.create();
