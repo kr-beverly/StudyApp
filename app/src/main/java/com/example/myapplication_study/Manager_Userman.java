@@ -2,16 +2,17 @@ package com.example.myapplication_study;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -72,11 +73,63 @@ class ManagerAdapter extends BaseAdapter{
         TextView password = (TextView)view.findViewById(R.id.userPassword);
         TextView name = (TextView)view.findViewById(R.id.userName);
         TextView lastTime = (TextView)view.findViewById(R.id.userLasttime);
+        Button manager_user_edit_btn = (Button)view.findViewById(R.id.manager_user_edit_btn);
+        Button manager_user_delete_btn = (Button)view.findViewById(R.id.manager_user_delete_btn);
 
         id.setText(Manager_Userman_Data.get(position).getId());
         password.setText(Manager_Userman_Data.get(position).getPassword());
         name.setText(Manager_Userman_Data.get(position).getName());
         lastTime.setText(Manager_Userman_Data.get(position).getLastTime());
+
+        manager_user_edit_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
+                builder.setTitle("회원 정보 수정");
+                builder.setMessage("수정하시겠습니까?");
+                builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.dismiss();
+                        //확인 클릭 후 회원 정보 수정 이벤트 추가 해야함
+                    }
+                });
+                builder.setNegativeButton("취소", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                        Toast.makeText(builder.getContext(),"취소되었습니다.", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+            }
+        });
+
+        manager_user_delete_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
+                builder.setTitle("회원 정보 삭제");
+                builder.setMessage("삭제하시겠습니까?");
+                builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.dismiss();
+                        Toast.makeText(builder.getContext(),"삭제되었습니다.", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                builder.setNegativeButton("취소", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                        Toast.makeText(builder.getContext(),"취소되었습니다.", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+            }
+        });
 
 
         return view;
