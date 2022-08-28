@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/StudyApp-main(chge-user)/app/src/main/res/layout/activity_loginform.xml" value="0.3619791666666667" />
+        <entry key="..\:/StudyApp-main(chge-user)/app/src/main/res/layout/activity_main.xml" value="0.3619791666666667" />
+        <entry key="..\:/StudyApp-main(chge-user)/app/src/main/res/layout/activity_managerhome.xml" value="0.3619791666666667" />
+        <entry key="..\:/StudyApp-main(chge-user)/app/src/main/res/layout/activity_managernotice.xml" value="0.23796296296296296" />
+        <entry key="..\:/StudyApp-main(chge-user)/app/src/main/res/layout/activity_managernotice_list.xml" value="0.3619791666666667" />
+        <entry key="..\:/StudyApp-main(chge-user)/app/src/main/res/layout/activity_manageruserman.xml" value="0.23796296296296296" />
+        <entry key="..\:/StudyApp-main(chge-user)/app/src/main/res/layout/activity_manageruserman_list.xml" value="0.3619791666666667" />
+        <entry key="..\:/StudyApp-main(chge-user)/app/src/main/res/layout/activity_signmyfage.xml" value="0.23796296296296296" />
+        <entry key="..\:/StudyApp-main(chge-user)/app/src/main/res/layout/activity_signreservation.xml" value="0.23796296296296296" />
+        <entry key="..\:/StudyApp-main(chge-user)/app/src/main/res/layout/activity_signup.xml" value="0.3619791666666667" />
+        <entry key="..\:/StudyApp-main(chge-user)/app/src/main/res/layout/activity_signuphome.xml" value="0.33611111111111114" />
+        <entry key="..\:/StudyApp-main(chge-user)/app/src/main/res/layout/activity_user_info.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

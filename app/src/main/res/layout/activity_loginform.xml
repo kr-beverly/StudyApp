@@ -1,0 +1,89 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Reservation">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        android:paddingRight="20dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="144dp">
+
+        <EditText
+            android:id="@+id/et_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:hint="ID"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:minHeight="48dp"
+            android:textColorHint="#000000"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="143dp" />
+
+        <EditText
+            android:id="@+id/et_pass"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:hint="Password"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:minHeight="48dp"
+            android:textColorHint="#000000"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="223dp" />
+
+        <CheckBox
+            android:id="@+id/login_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="로그인 정보 기억하기" />
+
+        //Sign in 버튼 눌린 후 home으로 넘어가야 함
+        <Button
+            android:id="@+id/btn_loginform"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="로그인"
+            android:textColor="@color/white"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="341dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"/>
+
+        //로그인
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="or"
+            android:textSize="20dp"
+            tools:layout_editor_absoluteX="52dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="#393939"
+            android:layout_gravity="center"/>
+
+        //회원가입
+        <Button
+            android:id="@+id/btn_loginform_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="회원가입"
+            android:textColor="@color/white"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="479dp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+</LinearLayout>

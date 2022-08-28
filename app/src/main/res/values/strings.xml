@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">My Application_study</string>
+    <string name="title_activity_reservation">reservation</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+
+    <string name="action_voucher">이용권</string>
+
+    <string name="action_voucher_day">개인일일이용권</string>
+    <string name="action_voucher_time">개인시간이용권</string>
+    <string name="action_voucher_group4">단체이용권 4인</string>
+    <string name="action_voucher_group6">단체이용권 6인</string>
+    <string name="action_voucher_day_2">2시간</string>
+    <string name="action_voucher_day_4">4시간</string>
+    <string name="action_voucher_day_6">6시간</string>
+    <string name="action_voucher_day_8">8시간</string>
+    <string name="action_voucher_day_12">12시간</string>
+    <string name="action_voucher_time_30">30시간</string>
+    <string name="action_voucher_time_50">50시간</string>
+    <string name="action_voucher_time_100">100시간</string>
+    <string name="action_voucher_time_200">200시간</string>
+    <string name="action_voucher_group4_2">2시간</string>
+    <string name="action_voucher_group4_4">4시간</string>
+    <string name="action_voucher_group4_6">6시간</string>
+    <string name="action_voucher_group6_2">2시간</string>
+    <string name="action_voucher_group6_4">4시간</string>
+    <string name="action_voucher_group6_6">6시간</string>
+
+</resources>
