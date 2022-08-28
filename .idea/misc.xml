@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
         <entry key="..\:/StudyApp-main(chge-user)/app/src/main/res/layout/activity_loginform.xml" value="0.3619791666666667" />
         <entry key="..\:/StudyApp-main(chge-user)/app/src/main/res/layout/activity_main.xml" value="0.3619791666666667" />
         <entry key="..\:/StudyApp-main(chge-user)/app/src/main/res/layout/activity_managerhome.xml" value="0.3619791666666667" />
@@ -15,6 +16,9 @@
         <entry key="..\:/StudyApp-main(chge-user)/app/src/main/res/layout/activity_signup.xml" value="0.3619791666666667" />
         <entry key="..\:/StudyApp-main(chge-user)/app/src/main/res/layout/activity_signuphome.xml" value="0.33611111111111114" />
         <entry key="..\:/StudyApp-main(chge-user)/app/src/main/res/layout/activity_user_info.xml" value="0.1" />
+=======
+        <entry key="..\:/Users/tobi0/AndroidStudioProjects/StudyApp-main/app/src/main/res/layout/activity_signuphome.xml" value="0.10009057971014493" />
+>>>>>>> 6c5cdb53b91cc6ab251bac3ad6da0d67a1b0be19
       </map>
     </option>
   </component>

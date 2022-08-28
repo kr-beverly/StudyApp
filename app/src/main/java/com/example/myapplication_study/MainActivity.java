@@ -39,6 +39,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+<<<<<<< HEAD
+=======
+        btn_manager_login = findViewById(R.id.btn_manager_login);
+        btn_manager_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Manager_home.class);
+                startActivity(intent);
+            }
+        });
+
+>>>>>>> 6c5cdb53b91cc6ab251bac3ad6da0d67a1b0be19
         bottomNavigationView =findViewById(R.id.bottomNavi);
         bottomNavigationView.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
             @Override

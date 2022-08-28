@@ -7,7 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+<<<<<<< HEAD
 import android.widget.TextView;
+=======
+>>>>>>> 6c5cdb53b91cc6ab251bac3ad6da0d67a1b0be19
 import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
@@ -20,8 +23,12 @@ import org.json.JSONObject;
 public class UserInfo extends AppCompatActivity {
 
     private Button btn_update;
+<<<<<<< HEAD
     private TextView et_id;
     private EditText et_pass, et_name, et_birth, et_phonenum, et_mail;
+=======
+    private EditText et_id, et_pass, et_name, et_birth, et_phonenum, et_mail;
+>>>>>>> 6c5cdb53b91cc6ab251bac3ad6da0d67a1b0be19
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,12 +42,17 @@ public class UserInfo extends AppCompatActivity {
         et_phonenum = findViewById(R.id.et_phonenum);
         et_mail = findViewById(R.id.et_mail);
 
+<<<<<<< HEAD
         Intent intent = getIntent();
         String user_id = intent.getStringExtra("user_id");
 
         et_id.setText(user_id);
 
         btn_update = (findViewById(R.id.btn_update));
+=======
+        btn_update = (findViewById(R.id.btn_update));
+
+>>>>>>> 6c5cdb53b91cc6ab251bac3ad6da0d67a1b0be19
         btn_update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,11 +70,19 @@ public class UserInfo extends AppCompatActivity {
                             JSONObject jsonObject = new JSONObject(response);
                             boolean success = jsonObject.getBoolean("success");
                             if (success) {
+<<<<<<< HEAD
                                 Toast.makeText(getApplicationContext(), "정보 수정에 성공하였습니다!", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(UserInfo.this, Signup_home.class);
                                 startActivity(intent);
                             } else {
                                 Toast.makeText(getApplicationContext(),"정보 수정에 실패하였습니다!", Toast.LENGTH_SHORT).show();
+=======
+                                Toast.makeText(getApplicationContext(),"정보 수정에 성공하였습니다.", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(UserInfo.this, Signup_home.class);
+                                startActivity(intent);
+                            } else {
+                                Toast.makeText(getApplicationContext(),"정보 수정에 실패하였습니다.", Toast.LENGTH_SHORT).show();
+>>>>>>> 6c5cdb53b91cc6ab251bac3ad6da0d67a1b0be19
                                 return;
                             }
                         } catch (JSONException e) {

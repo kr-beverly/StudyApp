@@ -81,6 +81,10 @@ public class Signup extends AppCompatActivity {
                         }
                     }
                 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6c5cdb53b91cc6ab251bac3ad6da0d67a1b0be19
                 ValidateRequest validateRequest = new ValidateRequest(user_id, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(Signup.this);
                 queue.add(validateRequest);

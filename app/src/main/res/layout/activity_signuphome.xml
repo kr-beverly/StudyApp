@@ -26,6 +26,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:background="@color/black"/>
+<<<<<<< HEAD
 
         <Button
             android:id="@+id/btn_manager_login"
@@ -38,6 +39,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+=======
+>>>>>>> 6c5cdb53b91cc6ab251bac3ad6da0d67a1b0be19
     </LinearLayout>
 
     <FrameLayout

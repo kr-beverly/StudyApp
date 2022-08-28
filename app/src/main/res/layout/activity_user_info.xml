@@ -18,7 +18,11 @@
             android:layout_gravity="center"
             android:text="아이디"></TextView>
 
+<<<<<<< HEAD
         <TextView
+=======
+        <EditText
+>>>>>>> 6c5cdb53b91cc6ab251bac3ad6da0d67a1b0be19
             android:id="@+id/et_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -26,7 +30,10 @@
             android:inputType="textCapWords"
             android:minHeight="48dp"
             android:padding="10dp"
+<<<<<<< HEAD
             android:text="아이디"
+=======
+>>>>>>> 6c5cdb53b91cc6ab251bac3ad6da0d67a1b0be19
             android:textColorHint="#757575" />
 
 
@@ -45,7 +52,10 @@
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
             android:padding="10dp"
+<<<<<<< HEAD
             android:text="비밀번호"
+=======
+>>>>>>> 6c5cdb53b91cc6ab251bac3ad6da0d67a1b0be19
             android:textColorHint="#757575" />
 
         <TextView
@@ -63,7 +73,10 @@
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
             android:padding="10dp"
+<<<<<<< HEAD
             android:text = "이름"
+=======
+>>>>>>> 6c5cdb53b91cc6ab251bac3ad6da0d67a1b0be19
             android:textColorHint="#757575" />
 
         <TextView
@@ -81,7 +94,10 @@
             android:inputType="textEmailAddress"
             android:padding="10dp"
             android:textColorHint="#757575"
+<<<<<<< HEAD
             android:text = "생년월일"
+=======
+>>>>>>> 6c5cdb53b91cc6ab251bac3ad6da0d67a1b0be19
             tools:ignore="TouchTargetSizeCheck" />
 
         <TextView
@@ -99,7 +115,10 @@
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
             android:padding="10dp"
+<<<<<<< HEAD
             android:text = "전화번호"
+=======
+>>>>>>> 6c5cdb53b91cc6ab251bac3ad6da0d67a1b0be19
             android:textColorHint="#757575" />
 
         <TextView
@@ -117,7 +136,10 @@
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
             android:padding="10dp"
+<<<<<<< HEAD
             android:text="이메일"
+=======
+>>>>>>> 6c5cdb53b91cc6ab251bac3ad6da0d67a1b0be19
             android:textColorHint="#757575" />
 
         <Button

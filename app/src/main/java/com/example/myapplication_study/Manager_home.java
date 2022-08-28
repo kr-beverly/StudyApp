@@ -10,12 +10,18 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+<<<<<<< HEAD
 import android.widget.ListView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.List;
 
+=======
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+>>>>>>> 6c5cdb53b91cc6ab251bac3ad6da0d67a1b0be19
 public class Manager_home extends AppCompatActivity {
     private Button manager_btn_logout;
 
@@ -25,7 +31,11 @@ public class Manager_home extends AppCompatActivity {
 
     private Manager_Seat manager_seat;
     private Manager_Notice manager_notice;
+<<<<<<< HEAD
     private ManagerUserman manager_userman;
+=======
+    private Manager_Userman manager_userman;
+>>>>>>> 6c5cdb53b91cc6ab251bac3ad6da0d67a1b0be19
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
