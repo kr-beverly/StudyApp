@@ -6,10 +6,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
-<<<<<<< HEAD
 import android.os.AsyncTask;
-=======
->>>>>>> 6c5cdb53b91cc6ab251bac3ad6da0d67a1b0be19
+
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,23 +15,19 @@ import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-<<<<<<< HEAD
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-=======
->>>>>>> 6c5cdb53b91cc6ab251bac3ad6da0d67a1b0be19
+
 public class Signup_home extends AppCompatActivity {
     private Button sign_btn_logout;
 
     private BottomNavigationView sign_bottomNavigationView;
-<<<<<<< HEAD
     private Button btn_manager_login;
-=======
->>>>>>> 6c5cdb53b91cc6ab251bac3ad6da0d67a1b0be19
+
     private FragmentManager sign_fm;
     private FragmentTransaction sign_ft;
 
@@ -47,7 +41,6 @@ public class Signup_home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signuphome);
 
-<<<<<<< HEAD
         //매니저 버튼
         Intent intent = getIntent();
         String user_id = intent.getStringExtra("user_id");
@@ -76,8 +69,6 @@ public class Signup_home extends AppCompatActivity {
 //            }
 //        });
 
-=======
->>>>>>> 6c5cdb53b91cc6ab251bac3ad6da0d67a1b0be19
         sign_btn_logout=findViewById(R.id.sign_btn_logout);
         sign_btn_logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -137,7 +128,6 @@ public class Signup_home extends AppCompatActivity {
                 sign_ft.commit();
         }
     }
-<<<<<<< HEAD
 
     //매니저버튼
     class BackgroundTask extends AsyncTask<Void, Void, String>
@@ -186,6 +176,4 @@ public class Signup_home extends AppCompatActivity {
         }
 
     }
-=======
->>>>>>> 6c5cdb53b91cc6ab251bac3ad6da0d67a1b0be19
 }

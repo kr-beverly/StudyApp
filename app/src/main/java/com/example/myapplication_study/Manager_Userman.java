@@ -18,45 +18,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-<<<<<<< HEAD
-import java.util.List;
-
-class Manager_Userman_Data{
-    String user_id;
-    String user_pass;
-    String name;
-
-
-    public String getUserID() {
-        return user_id;
-    }
-
-    public void setUserID(String user_id) {
-        this.user_id = user_id;
-    }
-
-    public String getUserPassword() {
-        return user_pass;
-    }
-
-    public void setUserPassword(String user_pass) {
-        this.user_pass = user_pass;
-    }
-
-    public String getUserName() {
-        return name;
-    }
-
-    public void setUserName(String name) {
-        this.name = name;
-    }
-
-    public Manager_Userman_Data(String user_id, String user_pass, String name) {
-        this.user_id = user_id;
-        this.user_pass = user_pass;
-        this.name = name;
-    }
-=======
 
 class Manager_Userman_Data{
     private String id;
@@ -75,19 +36,10 @@ class Manager_Userman_Data{
     public String getPassword() {return this.password;}
     public String getName() {return this.name;}
     public String getLastTime() {return this.lastTime;}
->>>>>>> 6c5cdb53b91cc6ab251bac3ad6da0d67a1b0be19
 
 }
 
 class ManagerAdapter extends BaseAdapter{
-<<<<<<< HEAD
-    private Context context;
-    private List<Manager_Userman_Data> userList;
-
-    public ManagerAdapter(Context context, List<Manager_Userman_Data> userList){
-        this.context = context;
-        this.userList = userList;
-=======
     Context mContext = null;
     LayoutInflater mLayoutInflater = null;
     ArrayList<Manager_Userman_Data> Manager_Userman_Data;
@@ -96,25 +48,16 @@ class ManagerAdapter extends BaseAdapter{
         mContext = context;
         Manager_Userman_Data = data;
         mLayoutInflater = LayoutInflater.from(mContext);
->>>>>>> 6c5cdb53b91cc6ab251bac3ad6da0d67a1b0be19
     }
 
     @Override
     public int getCount() {
-<<<<<<< HEAD
-        return userList.size();
-=======
         return Manager_Userman_Data.size();
->>>>>>> 6c5cdb53b91cc6ab251bac3ad6da0d67a1b0be19
     }
 
     @Override
     public Object getItem(int position) {
-<<<<<<< HEAD
-        return userList.get(position);
-=======
         return position;
->>>>>>> 6c5cdb53b91cc6ab251bac3ad6da0d67a1b0be19
     }
 
     @Override
@@ -123,22 +66,6 @@ class ManagerAdapter extends BaseAdapter{
     }
 
     @Override
-<<<<<<< HEAD
-    public View getView(int position, View convertView, ViewGroup parent) {
-        View v = View.inflate(context, R.layout.activity_manageruserman_list, null);
-        TextView userID = (TextView) v.findViewById(R.id.userID);
-        TextView userPassword = (TextView) v.findViewById(R.id.userPassword);
-        TextView userName = (TextView) v.findViewById(R.id.userName);
-
-
-        userID.setText(userList.get(position).getUserID());
-        userPassword.setText(userList.get(position).getUserPassword());
-        userName.setText(userList.get(position).getUserName());
-
-        v.setTag(userList.get(position).getUserID());
-        return v;
-    }
-=======
     public View getView(int position, View converView, ViewGroup parant) {
         View view = mLayoutInflater.inflate(R.layout.activity_manageruserman_list, null);
 
@@ -237,6 +164,4 @@ public class Manager_Userman extends Fragment {
         Manager_Userman_list.add(new Manager_Userman_Data("abc123", "qwer1234", "이름2", "7시간"));
     }
 
->>>>>>> 6c5cdb53b91cc6ab251bac3ad6da0d67a1b0be19
 }
-

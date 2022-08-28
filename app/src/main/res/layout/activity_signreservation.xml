@@ -30,11 +30,7 @@
                 android:layout_height="18dp"
                 android:layout_marginStart="87dp"
                 android:layout_marginTop="98dp"
-<<<<<<< HEAD
                 android:background="@color/gray200"
-=======
-                android:background="@android:color/white"
->>>>>>> 6c5cdb53b91cc6ab251bac3ad6da0d67a1b0be19
                 android:backgroundTint="@color/white"
                 android:onClick="reservation"
                 android:text="1"
@@ -47,11 +43,7 @@
                 android:layout_height="18dp"
                 android:layout_marginStart="117dp"
                 android:layout_marginTop="98dp"
-<<<<<<< HEAD
                 android:background="@color/gray200"
-=======
-                android:background="@android:color/white"
->>>>>>> 6c5cdb53b91cc6ab251bac3ad6da0d67a1b0be19
                 android:backgroundTint="@color/white"
                 android:onClick="reservation"
                 android:text="2"
@@ -497,11 +489,7 @@
                 android:layout_height="50dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="236dp"
-<<<<<<< HEAD
                 android:background="@color/gray200"
-=======
-                android:background="@android:color/white"
->>>>>>> 6c5cdb53b91cc6ab251bac3ad6da0d67a1b0be19
                 android:backgroundTint="@color/white"
                 android:text="Study Room 1"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
