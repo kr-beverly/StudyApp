@@ -28,18 +28,33 @@ public class UserInfo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_info);
 
+        et_id = (EditText)findViewById(R.id.et_id);
+        et_pass = (EditText)findViewById(R.id.et_pass);
+        et_name = (EditText)findViewById(R.id.et_name);
+        et_birth = (EditText)findViewById(R.id.et_birth);
+        et_phonenum = (EditText)findViewById(R.id.et_phonenum);
+        et_mail = (EditText)findViewById(R.id.et_mail);
+
+        Intent intent = getIntent();
+        String user_id = intent.getStringExtra("user_id");
+        String user_pass = intent.getStringExtra("user_pass");
+        String name = intent.getStringExtra("name");
+        String birth = intent.getStringExtra("birth");
+
+
+        et_id.setText(user_id);
+        et_pass.setText(user_pass);
+        et_name.setText(name);
+        et_birth.setText(birth);
+//        et_phonenum.setText(et_phonenum);
+//        et_mail.setText(et_mail);
+
         et_id = findViewById(R.id.et_id);
         et_pass = findViewById(R.id.et_pass);
         et_name = findViewById(R.id.et_name);
         et_birth = findViewById(R.id.et_birth);
         et_phonenum = findViewById(R.id.et_phonenum);
         et_mail = findViewById(R.id.et_mail);
-
-
-        Intent intent = getIntent();
-        String user_id = intent.getStringExtra("user_id");
-
-        et_id.setText(user_id);
 
         btn_update = (findViewById(R.id.btn_update));
         btn_update.setOnClickListener(new View.OnClickListener() {

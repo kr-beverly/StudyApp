@@ -27,12 +27,16 @@ public class Sign_Myfage extends Fragment {
 
         CheckBox ch_box = view.findViewById(R.id.ch_box);
         TextView ch_text_box = view.findViewById(R.id.ch_text_box);
+
+        //탈퇴 사유
         RadioGroup gr_quit = view.findViewById(R.id.gr_quit);
         RadioButton quit_1 = view.findViewById(R.id.quit_1);
         RadioButton quit_2 = view.findViewById(R.id.quit_2);
         RadioButton quit_3 = view.findViewById(R.id.quit_3);
         RadioButton quit_4 = view.findViewById(R.id.quit_4);
         EditText etc_quit = view.findViewById(R.id.etc_quit);
+
+        //탈퇴 버튼
         Button quit_btn = view.findViewById(R.id.quit_btn);
 
         Button show_myVoucher = view.findViewById(R.id.show_myVoucher);

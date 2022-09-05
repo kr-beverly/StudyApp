@@ -10,10 +10,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ListView;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import java.util.List;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Manager_home extends AppCompatActivity {
@@ -25,7 +22,7 @@ public class Manager_home extends AppCompatActivity {
 
     private Manager_Seat manager_seat;
     private Manager_Notice manager_notice;
-    private Manager_Userman manager_userman;
+    private ManagerUserman manager_userman;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +58,7 @@ public class Manager_home extends AppCompatActivity {
         });
         manager_seat = new Manager_Seat();
         manager_notice = new Manager_Notice();
-        manager_userman = new Manager_Userman();
+        manager_userman = new ManagerUserman();
         setFrag(0);
     }
 

@@ -20,14 +20,14 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Signup_home extends AppCompatActivity {
     private Button sign_btn_logout;
 
     private BottomNavigationView sign_bottomNavigationView;
-    private Button btn_manager_login;
-
     private FragmentManager sign_fm;
     private FragmentTransaction sign_ft;
 
@@ -35,6 +35,8 @@ public class Signup_home extends AppCompatActivity {
     private Sign_Voucher sign_voucher;
     private Sign_Notice sign_notice;
     private Sign_Myfage sign_myfage;
+
+    private List<ManagerUsermanList> usermanList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -135,6 +137,7 @@ public class Signup_home extends AppCompatActivity {
         String target;
 
         @Override
+        //초기화
         protected void onPreExecute() {
             target = "http://capstudyapp.dothome.co.kr/userList.php";
         }
@@ -170,6 +173,7 @@ public class Signup_home extends AppCompatActivity {
 
         @Override
         public void onPostExecute(String result){
+            //액티비티 전환
             Intent intent = new Intent(Signup_home.this, Manager_home.class);
             intent.putExtra("userList", result);
             Signup_home.this.startActivity(intent);

@@ -16,10 +16,10 @@ public class DeleteRequest extends StringRequest {
 
     private Map<String, String> parameters;
 
-    public DeleteRequest(String userID, Response.Listener<String> listener){
+    public DeleteRequest(String user_id, Response.Listener<String> listener){
         super(Request.Method.POST, URL, listener, null);//Post방식임
         parameters = new HashMap<>();//해쉬맵 생성후 parameters 변수에 값을 넣어줌
-        parameters.put("userID", userID);
+        parameters.put("user_id", user_id);
     }
 
     @Override
