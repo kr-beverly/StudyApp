@@ -2,7 +2,9 @@ package com.example.myapplication_study;
 
 import android.app.Activity;
 import android.content.Intent;
+
 import android.os.Bundle;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,7 +40,7 @@ public class ManagerUserman extends Fragment {
         listView = view.findViewById(R.id.listView);
         usermanList = new ArrayList<ManagerUsermanList>();
 
-        adapter = new ManagerUsermanListAdapter(getActivity().getApplicationContext(), usermanList,getActivity());
+        adapter = new ManagerUsermanListAdapter(getActivity().getApplicationContext(), usermanList, getActivity());
         listView.setAdapter(adapter);
 
         try {

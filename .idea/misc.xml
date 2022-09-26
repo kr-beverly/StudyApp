@@ -15,23 +15,30 @@
         <entry key="..\:/StudyApp-main(chge-user)/app/src/main/res/layout/activity_signup.xml" value="0.3619791666666667" />
         <entry key="..\:/StudyApp-main(chge-user)/app/src/main/res/layout/activity_signuphome.xml" value="0.33611111111111114" />
         <entry key="..\:/StudyApp-main(chge-user)/app/src/main/res/layout/activity_user_info.xml" value="0.1" />
+        <entry key="..\:/StudyApp-main/app/src/main/res/layout/activity_buy_voucher.xml" value="0.29713552800342025" />
+        <entry key="..\:/StudyApp-main/app/src/main/res/layout/activity_comment.xml" value="0.29713552800342025" />
         <entry key="..\:/StudyApp-main/app/src/main/res/layout/activity_detail.xml" value="0.29713552800342025" />
         <entry key="..\:/StudyApp-main/app/src/main/res/layout/activity_main.xml" value="0.27685185185185185" />
         <entry key="..\:/StudyApp-main/app/src/main/res/layout/activity_managerhome.xml" value="0.29713552800342025" />
         <entry key="..\:/StudyApp-main/app/src/main/res/layout/activity_managernotice.xml" value="0.21944444444444444" />
         <entry key="..\:/StudyApp-main/app/src/main/res/layout/activity_managernotice_list.xml" value="0.21944444444444444" />
+        <entry key="..\:/StudyApp-main/app/src/main/res/layout/activity_managerseat.xml" value="0.29713552800342025" />
         <entry key="..\:/StudyApp-main/app/src/main/res/layout/activity_manageruserman.xml" value="0.264" />
         <entry key="..\:/StudyApp-main/app/src/main/res/layout/activity_manageruserman_list.xml" value="0.264" />
         <entry key="..\:/StudyApp-main/app/src/main/res/layout/activity_my_voucher.xml" value="0.2020389249304912" />
+        <entry key="..\:/StudyApp-main/app/src/main/res/layout/activity_my_voucher_list.xml" value="0.4" />
         <entry key="..\:/StudyApp-main/app/src/main/res/layout/activity_myfage.xml" value="0.2933727311101731" />
         <entry key="..\:/StudyApp-main/app/src/main/res/layout/activity_notice.xml" value="0.2933727311101731" />
         <entry key="..\:/StudyApp-main/app/src/main/res/layout/activity_register.xml" value="0.3619791666666667" />
         <entry key="..\:/StudyApp-main/app/src/main/res/layout/activity_reservation.xml" value="0.2933727311101731" />
-        <entry key="..\:/StudyApp-main/app/src/main/res/layout/activity_signnotice.xml" value="0.3619791666666667" />
+        <entry key="..\:/StudyApp-main/app/src/main/res/layout/activity_sign_notice_list.xml" value="0.20478837109876016" />
+        <entry key="..\:/StudyApp-main/app/src/main/res/layout/activity_signnotice.xml" value="0.176" />
         <entry key="..\:/StudyApp-main/app/src/main/res/layout/activity_signreservation.xml" value="0.264" />
         <entry key="..\:/StudyApp-main/app/src/main/res/layout/activity_signup.xml" value="0.27685185185185185" />
         <entry key="..\:/StudyApp-main/app/src/main/res/layout/activity_signuphome.xml" value="0.264" />
+        <entry key="..\:/StudyApp-main/app/src/main/res/layout/activity_signvoucher.xml" value="0.29713552800342025" />
         <entry key="..\:/StudyApp-main/app/src/main/res/layout/activity_user_info.xml" value="0.264" />
+        <entry key="..\:/StudyApp-main/app/src/main/res/layout/activity_voucher.xml" value="0.2933727311101731" />
       </map>
     </option>
   </component>

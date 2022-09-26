@@ -1,13 +1,13 @@
 package com.example.myapplication_study;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -29,8 +29,6 @@ public class loginfrom extends AppCompatActivity {
         et_id = findViewById(R.id.et_id);
         et_pass = findViewById(R.id.et_pass);
         btn_loginform=findViewById(R.id.btn_loginform);
-
-
 
         btn_loginform.setOnClickListener(new View.OnClickListener() {
             @Override

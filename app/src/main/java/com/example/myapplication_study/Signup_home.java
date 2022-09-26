@@ -1,17 +1,16 @@
 package com.example.myapplication_study;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.content.Intent;
 import android.os.AsyncTask;
-
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -20,7 +19,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -33,7 +31,7 @@ public class Signup_home extends AppCompatActivity {
 
     private Sign_Reservation sign_reservation;
     private Sign_Voucher sign_voucher;
-    private Sign_Notice sign_notice;
+    private SignNotice sign_notice;
     private Sign_Myfage sign_myfage;
 
     private List<ManagerUsermanList> usermanList;
@@ -42,6 +40,7 @@ public class Signup_home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signuphome);
+
 
         //매니저 버튼
         Intent intent = getIntent();
@@ -103,7 +102,7 @@ public class Signup_home extends AppCompatActivity {
         });
         sign_reservation = new Sign_Reservation();
         sign_voucher = new Sign_Voucher();
-        sign_notice = new Sign_Notice();
+        sign_notice = new SignNotice();
         sign_myfage = new Sign_Myfage();
         setFrag(0);
     }
@@ -178,6 +177,5 @@ public class Signup_home extends AppCompatActivity {
             intent.putExtra("userList", result);
             Signup_home.this.startActivity(intent);
         }
-
     }
 }

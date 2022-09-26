@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class Sign_Notice extends Fragment {
+public class SignNotice extends Fragment {
     private Button sign_notice_write_btn;
     private View view;
 
@@ -20,6 +20,7 @@ public class Sign_Notice extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.activity_signnotice, container, false);
 
+        //글쓰기 창으로 넘어감
         sign_notice_write_btn = view.findViewById(R.id.sign_notice_write_btn);
         sign_notice_write_btn.setOnClickListener(new View.OnClickListener() {
             @Override
