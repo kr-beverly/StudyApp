@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -30,10 +31,11 @@ public class SignNotice extends Fragment {
     private Button sign_notice_write_btn;
     private View view;
 
-    ListView listView;
+    ListView sign_notice_listView;
     SignNoticeAdapter signNoticeAdapter;
     public static ArrayList<SignNoticeList> signNoticeListArrayList = new ArrayList<>();
-    String url = "http://capstudyapp.dothome.co.kr/BoardList.php";
+
+    String url = "http://capstudyapp.dothome.co.kr/signBoardList.php";
     SignNoticeList signNoticeList;
 
     @Nullable
@@ -41,9 +43,17 @@ public class SignNotice extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.activity_signnotice, container, false);
 
-        listView = view.findViewById(R.id.sign_listView);
+        sign_notice_listView = view.findViewById(R.id.sign_notice_listView);
         signNoticeAdapter = new SignNoticeAdapter(getContext(), signNoticeListArrayList);
-        listView.setAdapter(signNoticeAdapter);
+        sign_notice_listView.setAdapter(signNoticeAdapter);
+
+        sign_notice_listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                startActivity(new Intent(getActivity(),Detail.class).putExtra("position",position));
+            }
+        });
+
         retrieveData();
 
         //글쓰기 창으로 넘어감
@@ -58,6 +68,12 @@ public class SignNotice extends Fragment {
 
         return view;
     }
+
+//    private void goToSingNoticeDetails(int position) {
+//        Intent intent = new Intent(requireContext(), Detail.class);
+//        intent.putExtra(Detail.EXTRA_ITEM, (Serializable) signNoticeAdapter.getItem(position));
+//        startActivity(intent);
+//    }
 
     public void retrieveData(){
         StringRequest request = new StringRequest(Request.Method.POST, url,
@@ -78,8 +94,10 @@ public class SignNotice extends Fragment {
 
                                     String writ_num = object.getString("writ_num");
                                     String writ_title = object.getString("writ_title");
+                                    String writ_content = object.getString("writ_content");
+                                    String writ_date = object.getString("writ_date");
 
-                                    signNoticeList = new SignNoticeList(writ_num, writ_title);
+                                    signNoticeList = new SignNoticeList(writ_num, writ_title, writ_content, writ_date);
                                     signNoticeListArrayList.add(signNoticeList);
                                     signNoticeAdapter.notifyDataSetChanged();
                                 }

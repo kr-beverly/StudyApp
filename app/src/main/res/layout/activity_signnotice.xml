@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
     android:orientation="vertical"
     tools:context=".SignNotice">
 
     <ListView
-        android:id="@+id/sign_listView"
+        android:id="@+id/sign_notice_listView"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:focusableInTouchMode="true"
         android:layout_weight="1" />
 
     <Button

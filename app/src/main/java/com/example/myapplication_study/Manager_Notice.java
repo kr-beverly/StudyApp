@@ -62,11 +62,11 @@ class ManagerNoticeAdapter extends BaseAdapter{
     public View getView(int position, View converview, ViewGroup parant) {
         View view = mLayoutInflater.inflate(R.layout.activity_managernotice_list, null);
 
-        TextView noticetitle = (TextView)view.findViewById(R.id.noticeTitle);
-        Button noticedelete = (Button)view.findViewById(R.id.noticeDelete);
+        TextView notice_title = (TextView)view.findViewById(R.id.notice_title);
+        Button manager_btn_delete = (Button)view.findViewById(R.id.manager_btn_delete);
 
-        noticetitle.setText(Manager_Notice_Data.get(position).getNoticetitle());
-        noticedelete.setOnClickListener(new View.OnClickListener() {
+        notice_title.setText(Manager_Notice_Data.get(position).getNoticetitle());
+        manager_btn_delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(mContext);

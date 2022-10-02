@@ -18,7 +18,7 @@ public class SignNoticeAdapter extends ArrayAdapter<SignNoticeList> {
     List<SignNoticeList> arraysignNoticeList;
 
     public SignNoticeAdapter(@NonNull Context context, List<SignNoticeList> arraysignNoticeList) {
-        super(context, R.layout.activity_sign_notice_list, arraysignNoticeList);
+        super(context, R.layout.activity_signnotice_list, arraysignNoticeList);
 
         this.context = context;
         this.arraysignNoticeList = arraysignNoticeList;
@@ -28,13 +28,13 @@ public class SignNoticeAdapter extends ArrayAdapter<SignNoticeList> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_sign_notice_list, null, true);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_signnotice_list, null, true);
 
-        TextView tvnum = view.findViewById(R.id.notice_num);
-        TextView tvtitle = view.findViewById(R.id.notice_title);
+        TextView signtvnum = view.findViewById(R.id.sign_notice_num);
+        TextView signtvtitle = view.findViewById(R.id.sign_notice_title);
 
-        tvnum.setText(arraysignNoticeList.get(position).getWrit_num());
-        tvtitle.setText(arraysignNoticeList.get(position).getWrit_title());
+        signtvnum.setText(arraysignNoticeList.get(position).getWrit_num());
+        signtvtitle.setText(arraysignNoticeList.get(position).getWrit_title());
 
         return view;
     }
