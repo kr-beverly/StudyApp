@@ -66,15 +66,6 @@ public class SignNotice extends Fragment {
             }
         });
 
-        //삭제버튼
-        Button manager_notice_delete = (Button) view.findViewById(R.id.manager_notice_delete);
-        manager_notice_delete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
         return view;
     }
 
