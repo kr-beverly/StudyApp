@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -27,69 +26,46 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class SignNotice extends Fragment {
-    private Button sign_notice_write_btn;
-    private View view;
+public class ManagerNotice extends Fragment {
+    Button manager_notice_delete, manager_notice_write_btn;
 
-    ListView sign_notice_listView;
-    SignNoticeAdapter signNoticeAdapter;
-    public static ArrayList<SignNoticeList> signNoticeListArrayList = new ArrayList<>();
+    private ListView managerListView;
+    private ManagerNoticeAdapter noticeAdapter;
+    private ArrayList<ManagerNoticeDataList> managerNoticeDataList = new ArrayList<>();
 
-    String url = "http://capstudyapp.dothome.co.kr/signBoardList.php";
-    SignNoticeList signNoticeList;
+    String url = "http://capstudyapp.dothome.co.kr/managerBoardList.php";
+    ManagerNoticeDataList managerNoticeList;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.activity_signnotice, container, false);
+        View view = inflater.inflate(R.layout.activity_managernotice, container, false);
 
-        sign_notice_listView = view.findViewById(R.id.sign_notice_listView);
-        signNoticeAdapter = new SignNoticeAdapter(getContext(), signNoticeListArrayList);
-        sign_notice_listView.setAdapter(signNoticeAdapter);
-
-        sign_notice_listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                startActivity(new Intent(getActivity(),Detail.class).putExtra("position",position));
-            }
-        });
+        managerListView = view.findViewById(R.id.managerNoticeListView);
+        noticeAdapter = new ManagerNoticeAdapter(getContext(), managerNoticeDataList, getActivity());
+        managerListView.setAdapter(noticeAdapter);
 
         retrieveData();
 
-        //글쓰기 창으로 넘어감
-        sign_notice_write_btn = view.findViewById(R.id.sign_notice_write_btn);
-        sign_notice_write_btn.setOnClickListener(new View.OnClickListener() {
+        //공지글 쓰기
+        manager_notice_write_btn = view.findViewById(R.id.manager_notice_write_btn);
+        manager_notice_write_btn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), Register.class);
                 startActivity(intent);
-            }
-        });
-
-        //삭제버튼
-        Button manager_notice_delete = (Button) view.findViewById(R.id.manager_notice_delete);
-        manager_notice_delete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
             }
         });
 
         return view;
     }
 
-//    private void goToSingNoticeDetails(int position) {
-//        Intent intent = new Intent(requireContext(), Detail.class);
-//        intent.putExtra(Detail.EXTRA_ITEM, (Serializable) signNoticeAdapter.getItem(position));
-//        startActivity(intent);
-//    }
-
     public void retrieveData(){
         StringRequest request = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        signNoticeListArrayList.clear();
+                        managerNoticeDataList.clear();
                         try{
 
                             JSONObject jsonObject = new JSONObject(response);
@@ -103,12 +79,10 @@ public class SignNotice extends Fragment {
 
                                     String writ_num = object.getString("writ_num");
                                     String writ_title = object.getString("writ_title");
-                                    String writ_content = object.getString("writ_content");
-                                    String writ_date = object.getString("writ_date");
 
-                                    signNoticeList = new SignNoticeList(writ_num, writ_title, writ_content, writ_date);
-                                    signNoticeListArrayList.add(signNoticeList);
-                                    signNoticeAdapter.notifyDataSetChanged();
+                                    managerNoticeList = new ManagerNoticeDataList(writ_num, writ_title);
+                                    managerNoticeDataList.add(managerNoticeList);
+                                    noticeAdapter.notifyDataSetChanged();
                                 }
                             }
                         }

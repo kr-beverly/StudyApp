@@ -22,7 +22,7 @@
             </ScrollView>
 
             <TextView
-                android:id="@+id/notice_num"
+                android:id="@+id/manager_notice_num"
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:text="1"
@@ -32,7 +32,7 @@
                 android:textSize="20dp" />
 
             <TextView
-                android:id="@+id/notice_title"
+                android:id="@+id/manager_notice_title"
                 android:layout_width="280dp"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
@@ -43,7 +43,7 @@
             </TextView>
 
             <Button
-                android:id="@+id/manager_btn_delete"
+                android:id="@+id/manager_notice_delete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="삭제"></Button>

@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -70,6 +71,9 @@ public class ManagerUsermanListAdapter extends BaseAdapter {
                             if(success) {
                                 usermanList.remove(i);
                                 notifyDataSetChanged();
+                                Toast.makeText(parentActivity, "회원 삭제에 성공하였습니다!", Toast.LENGTH_SHORT).show();
+                            } else {
+                                Toast.makeText(parentActivity, "회원 삭제에 실패하였습니다!", Toast.LENGTH_SHORT).show();
                             }
                         } catch (Exception e) {
                             e.printStackTrace();
