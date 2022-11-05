@@ -9,8 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -52,6 +50,7 @@ public class Sign_Voucher extends Fragment {
         return view;
     }
 
+    //QR 코드 생성 코드
     public void createQRcode(ImageView img, String text) {
 
         MultiFormatWriter multiFormatWriter = new MultiFormatWriter();

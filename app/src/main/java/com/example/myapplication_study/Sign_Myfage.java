@@ -29,7 +29,8 @@ public class Sign_Myfage extends Fragment {
         TextView ch_text_box = view.findViewById(R.id.ch_text_box);
 
         //탈퇴 사유
-        RadioGroup gr_quit = view.findViewById(R.id.gr_quit);
+        RadioGroup gr_quit = (RadioGroup) view.findViewById(R.id.gr_quit);
+        int quirGroupID = gr_quit.getCheckedRadioButtonId();
         RadioButton quit_1 = view.findViewById(R.id.quit_1);
         RadioButton quit_2 = view.findViewById(R.id.quit_2);
         RadioButton quit_3 = view.findViewById(R.id.quit_3);
@@ -38,24 +39,6 @@ public class Sign_Myfage extends Fragment {
 
         //탈퇴 버튼
         Button quit_btn = view.findViewById(R.id.quit_btn);
-
-        Button show_myVoucher = view.findViewById(R.id.show_myVoucher);
-        show_myVoucher.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), My_Voucher.class);
-                startActivity(intent);
-            }
-        });
-
-        Button ch_myinfo = view.findViewById(R.id.ch_myinfo);
-        ch_myinfo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), UserInfo.class);
-                startActivity(intent);
-            }
-        });
 
         ch_box.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -88,6 +71,26 @@ public class Sign_Myfage extends Fragment {
                 } else {
                     etc_quit.setVisibility(View.VISIBLE);
                 }
+            }
+        });
+
+        //내 이용권 보기
+        Button show_myVoucher = view.findViewById(R.id.show_myVoucher);
+        show_myVoucher.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), My_Voucher.class);
+                startActivity(intent);
+            }
+        });
+
+        //회원정보 수정
+        Button ch_myinfo = view.findViewById(R.id.ch_myinfo);
+        ch_myinfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), UserInfo.class);
+                startActivity(intent);
             }
         });
 

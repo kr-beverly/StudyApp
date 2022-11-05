@@ -1,7 +1,6 @@
 package com.example.myapplication_study;
 
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -52,9 +51,6 @@ public class Register extends AppCompatActivity {
                     // calling method to add data to Firebase Firestore.
                     addDataToDatabase(writ_title, writ_content);
                 }
-
-                Intent intent = new Intent(Register.this, Signup_home.class);
-                startActivity(intent);
             }
         });
     }

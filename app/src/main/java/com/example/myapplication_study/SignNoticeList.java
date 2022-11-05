@@ -1,7 +1,7 @@
 package com.example.myapplication_study;
 
 public class SignNoticeList {
-    String writ_num;
+    String writ_num, user_num;
     String writ_title, writ_content, writ_date;
 
     public SignNoticeList() {

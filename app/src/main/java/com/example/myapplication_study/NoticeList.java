@@ -1,6 +1,7 @@
 package com.example.myapplication_study;
 
 public class NoticeList {
+
     String writ_num, writ_title;
 
     public NoticeList() {

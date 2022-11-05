@@ -1,11 +1,13 @@
 package com.example.myapplication_study;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -34,12 +36,16 @@ public class Signup_home extends AppCompatActivity {
     private SignNotice sign_notice;
     private Sign_Myfage sign_myfage;
 
+    private SharedPreferences preferences;
+    private TextView tv_usernum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signuphome);
 
+        preferences = getSharedPreferences("user_tbl", MODE_PRIVATE);
+        tv_usernum = findViewById(R.id.tv_usernum);
 
         //매니저 버튼
         Intent intent = getIntent();
@@ -181,51 +187,8 @@ public class Signup_home extends AppCompatActivity {
         }
     }
 
-    class NoticeBackgroundTask extends AsyncTask<Void, Void, String>
-    {
-        String target;
-
-        @Override
-        //초기화
-        protected void onPreExecute() {
-            target = "http://capstudyapp.dothome.co.kr/managerBoardList.php";
-        }
-
-        @Override
-        protected String doInBackground(Void... voids) {
-            try {
-                URL url  = new URL(target);
-                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-                InputStream inputStream = httpURLConnection.getInputStream();
-                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-                String temp;
-                StringBuilder stringBuilder = new StringBuilder();
-                while((temp = bufferedReader.readLine()) != null)
-                {
-                    stringBuilder.append(temp +"\n");
-                }
-                bufferedReader.close();
-                inputStream.close();
-                httpURLConnection.disconnect();
-                return stringBuilder.toString().trim();
-
-            } catch (Exception e){
-                e.printStackTrace();
-            }
-            return null;
-        }
-
-        @Override
-        public void onProgressUpdate(Void... values) {
-            super.onProgressUpdate(values);
-        }
-
-        @Override
-        public void onPostExecute(String result){
-            //액티비티 전환
-            Intent intent = new Intent(Signup_home.this, Manager_home.class);
-            intent.putExtra("managerBoardList", result);
-            startActivity(intent);
-        }
+    private void getPreferences(){
+        //getString(KEY,KEY값이 없을때 대체)
+        tv_usernum.setText("user_num = " + preferences.getString("user_num",""));
     }
 }
