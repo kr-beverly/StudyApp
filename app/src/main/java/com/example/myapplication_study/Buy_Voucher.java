@@ -27,22 +27,21 @@ public class Buy_Voucher extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buy_voucher);
 
-        RadioGroup gr_voucher = (RadioGroup) findViewById(R.id.gr_voucher);
-        int gr_voucherID = gr_voucher.getCheckedRadioButtonId();
-        acess_code = ((RadioButton) findViewById(gr_voucherID)).getText().toString();
-
-        gr_voucher.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                RadioButton voucherButton = (RadioButton) findViewById(checkedId);
-                acess_code = voucherButton.getText().toString();
-            }
-        });
-
         voucher_purchase = findViewById(R.id.vocher_purchase);
         voucher_purchase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                RadioGroup gr_voucher = (RadioGroup) findViewById(R.id.gr_voucher);
+                int gr_voucherID = gr_voucher.getCheckedRadioButtonId();
+                acess_code = ((RadioButton) findViewById(gr_voucherID)).getText().toString();
+
+                gr_voucher.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup group, int checkedId) {
+                        RadioButton voucherButton = (RadioButton) findViewById(checkedId);
+                        acess_code = voucherButton.getText().toString();
+                    }
+                });
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
