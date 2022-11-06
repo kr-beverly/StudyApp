@@ -28,9 +28,6 @@
             android:name=".My_Voucher"
             android:exported="false" />
         <activity
-            android:name=".UserInfo"
-            android:exported="false" />
-        <activity
             android:name=".Comment"
             android:exported="false" />
         <activity

@@ -14,81 +14,118 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
-            <Button
-                android:id="@+id/show_myVoucher"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="내 이용권 보기"></Button>
-
-            <Button
-                android:id="@+id/ch_myinfo"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="회원정보 수정"></Button>
-
-            <CheckBox
-                android:id="@+id/ch_box"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="회원 탈퇴" />
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
 
             <TextView
-                android:id="@+id/ch_text_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="아이디"
+                android:textSize="15dp"></TextView>
+
+            <EditText
+                android:id="@+id/et_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="invisible"
-                android:text="탈퇴 사유"
-                app:layout_constraintTop_toBottomOf="@+id/ch_box"
-                android:textSize="20dp"></TextView>
-            <RadioGroup
-                android:id="@+id/gr_quit"
-                android:visibility="invisible"
+                android:layout_marginBottom="5dp"
+                android:inputType="textCapWords"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:textColorHint="#757575" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="패스워드"
+                android:textSize="15dp"></TextView>
+
+            <EditText
+                android:id="@+id/et_pass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/ch_text_box">
+                android:layout_marginBottom="5dp"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:textColorHint="#757575" />
 
-                <RadioButton
-                    android:id="@+id/quit_1"
-                    android:visibility="invisible"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="탈퇴 사유 1"></RadioButton>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="이름"
+                android:textSize="15dp"></TextView>
 
-                <RadioButton
-                    android:id="@+id/quit_2"
-                    android:visibility="invisible"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="탈퇴 사유 2"></RadioButton>
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:textColorHint="#757575" />
 
-                <RadioButton
-                    android:id="@+id/quit_3"
-                    android:visibility="invisible"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="탈퇴 사유 3"></RadioButton>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="생년월일"
+                android:textSize="15dp"></TextView>
 
-                <RadioButton
-                    android:id="@+id/quit_4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="탈퇴 사유 4"
-                    android:visibility="invisible"></RadioButton>
+            <EditText
+                android:id="@+id/et_birth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:textColorHint="#757575"
+                tools:ignore="TouchTargetSizeCheck" />
 
-                <EditText
-                    android:id="@+id/etc_quit"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="기타"
-                    android:visibility="invisible"></EditText>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="전화번호"
+                android:textSize="15dp"></TextView>
 
-                <Button
-                    android:id="@+id/quit_btn"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="탈퇴"></Button>
-            </RadioGroup>
+            <EditText
+                android:id="@+id/et_phonenum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:textColorHint="#757575" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="이메일"
+                android:textSize="15dp"></TextView>
+
+            <EditText
+                android:id="@+id/et_mail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:textColorHint="#757575" />
+
+            <Button
+                android:id="@+id/btn_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="수정"></Button>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
