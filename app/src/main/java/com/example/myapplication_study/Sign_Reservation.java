@@ -78,7 +78,7 @@ public class Sign_Reservation extends Fragment {
                 @Override
                 public void onClick(View view) {
                     Button newButton = (Button) view;
-                    seat_code = view.findViewById(btnID[finalI]).getContext().toString();
+                    seat_code = button[finalI].getText().toString();
 
                     for (Button tempButton : button){
                         if(tempButton == newButton){
@@ -100,15 +100,14 @@ public class Sign_Reservation extends Fragment {
 
                                     textView.setText(state + " " + selectedHour + "시" + selectedMinute + "분");
 
-
-
                                     //확정 팝업
                                     AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                                     builder.setTitle(button[finalI].getText().toString() + "번 좌석");
                                     builder.setMessage(textView.getText().toString() + " 예약 확정하시겠습니까?");
                                     builder.setPositiveButton("예약 확정", new DialogInterface.OnClickListener() {
                                         @Override
-                                        public void onClick(DialogInterface dialog, int id) {
+                                        public void onClick(DialogInterface dialog, int i) {
+                                            seat_code = button[finalI].getText().toString();
                                             Response.Listener<String> responseListener = new Response.Listener<String>() {
                                                 @Override
                                                 public void onResponse(String response) {
@@ -117,8 +116,8 @@ public class Sign_Reservation extends Fragment {
                                                         boolean success = jsonObject.getBoolean("success");
                                                         if(success){
                                                             Toast.makeText(getContext(), button[finalI].getText().toString() + "번 좌석 " + textView.getText().toString() + " 예약 확정 되었습니다.", Toast.LENGTH_SHORT).show();
-                                                            Intent intent = new Intent(getActivity().getApplicationContext(), Signup_home.class);
-                                                            startActivity(intent);
+                                                            //Intent intent = new Intent(getActivity().getApplicationContext(), Signup_home.class);
+                                                            //startActivity(intent);
                                                         } else {
                                                             Toast.makeText(getActivity().getApplicationContext(),"이용권 구매에 실패하였습니다.", Toast.LENGTH_SHORT).show();
                                                             return;
