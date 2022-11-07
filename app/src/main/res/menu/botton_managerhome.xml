@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/manager_seat"
+        android:enabled="true"
+        android:title="좌석 관리"
+        android:icon="@drawable/premium_icon_coupon_941056"></item>
+
+    <item
+        android:id="@+id/manager_notice"
+        android:enabled="true"
+        android:title="게시판"
+        android:icon="@drawable/ic_baseline_co_present_24"></item>
+
+    <item
+        android:id="@+id/manager_userman"
+        android:enabled="true"
+        android:title="회원관리"
+        android:icon="@drawable/myfage"></item>
+</menu>

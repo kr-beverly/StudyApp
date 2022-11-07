@@ -1,0 +1,29 @@
+package com.example.myapplication_study;
+
+import com.android.volley.AuthFailureError;
+import com.android.volley.Response;
+import com.android.volley.toolbox.StringRequest;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class NoticeDeleteRequest extends StringRequest {
+
+    //현재 안드로이드앱을 에뮬레이터로 돌리므로 에뮬레이터가 설치된 서버에 있는 아파치 서버에 접근하려면
+    //다음과 같이 10.0.2.2:포트번호 로 접근해야합니다 저는 8080 포트를 써서 다음과 같이 했습니다
+    final static private String URL = "http://capstudyapp.dothome.co.kr/managerBoardDelete.php";
+
+    private Map<String, String> parameters;
+
+    public NoticeDeleteRequest(String writ_title, Response.Listener<String> listener){
+        super(Method.POST, URL, listener, null);//Post방식임
+        parameters = new HashMap<>();//해쉬맵 생성후 parameters 변수에 값을 넣어줌
+        parameters.put("writ_title",writ_title );
+    }
+
+    @Override
+    protected Map<String, String> getParams() throws AuthFailureError {
+        return parameters;
+    }
+
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Myfage">
+
+    <CheckBox
+        android:id="@+id/ch_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="로그인 창으로 이동하기" />
+
+    <Button
+        android:id="@+id/myfage_loginbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="로그인"
+        android:textSize="15sp"
+        android:visibility="invisible"
+        app:icon="@drawable/ic_baseline_login_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,TextContrastCheck"></Button>
+
+</LinearLayout>
