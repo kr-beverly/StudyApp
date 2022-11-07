@@ -26,6 +26,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -40,7 +41,7 @@ public class Sign_Reservation extends Fragment {
             R.id.sign_seat_31, R.id.sign_seat_32, R.id.sign_seat_33, R.id.sign_seat_34, R.id.sign_seat_35, R.id.sign_seat_36, R.id.sign_seat_37, R.id.sign_seat_38, R.id.sign_seat_39, R.id.sign_seat_40};
     TextView textView;
     Button check_seat_time;
-    private String seat_code;
+    String seat_code;
 
     @Nullable
     @Override
@@ -76,9 +77,9 @@ public class Sign_Reservation extends Fragment {
             button[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    Button newButton = (Button) view;
                     seat_code = view.findViewById(btnID[finalI]).getContext().toString();
 
-                    Button newButton = (Button) view;
                     for (Button tempButton : button){
                         if(tempButton == newButton){
                             final Calendar mcurrentTime = Calendar.getInstance();
@@ -99,38 +100,41 @@ public class Sign_Reservation extends Fragment {
 
                                     textView.setText(state + " " + selectedHour + "시" + selectedMinute + "분");
 
-                                    //확정 팝업
 
+
+                                    //확정 팝업
                                     AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                                     builder.setTitle(button[finalI].getText().toString() + "번 좌석");
                                     builder.setMessage(textView.getText().toString() + " 예약 확정하시겠습니까?");
                                     builder.setPositiveButton("예약 확정", new DialogInterface.OnClickListener() {
                                         @Override
-                                        public void onClick(DialogInterface dialog, int i) {
+                                        public void onClick(DialogInterface dialog, int id) {
                                             Response.Listener<String> responseListener = new Response.Listener<String>() {
                                                 @Override
                                                 public void onResponse(String response) {
                                                     try{
                                                         JSONObject jsonObject = new JSONObject(response);
                                                         boolean success = jsonObject.getBoolean("success");
-                                                        if (success) {
+                                                        if(success){
                                                             Toast.makeText(getContext(), button[finalI].getText().toString() + "번 좌석 " + textView.getText().toString() + " 예약 확정 되었습니다.", Toast.LENGTH_SHORT).show();
-                                                            dialog.dismiss();
-                                                            //Intent intent = new Intent(Sign_Reservation.this, Signup_home.class);
-                                                            //startActivity(intent);
+                                                            Intent intent = new Intent(getActivity().getApplicationContext(), Signup_home.class);
+                                                            startActivity(intent);
                                                         } else {
-                                                            Toast.makeText(getActivity().getApplicationContext(),"예약에 실패하였습니다.", Toast.LENGTH_SHORT).show();
+                                                            Toast.makeText(getActivity().getApplicationContext(),"이용권 구매에 실패하였습니다.", Toast.LENGTH_SHORT).show();
                                                             return;
                                                         }
+
                                                     } catch (JSONException e){
                                                         e.printStackTrace();
                                                     }
-
                                                 }
                                             };
+
                                             ReservationRequest reservationRequest = new ReservationRequest(seat_code, responseListener);
                                             RequestQueue queue = Volley.newRequestQueue(getActivity().getApplicationContext());
                                             queue.add(reservationRequest);
+                                            //Toast.makeText(getContext(), button[finalI].getText().toString() + "번 좌석 " + textView.getText().toString() + " 예약 확정 되었습니다.", Toast.LENGTH_SHORT).show();
+                                            dialog.dismiss();
                                         }
                                     });
                                     builder.setNegativeButton("취소", new DialogInterface.OnClickListener() {
@@ -142,7 +146,7 @@ public class Sign_Reservation extends Fragment {
                                     AlertDialog alertDialog = builder.create();
                                     alertDialog.show();
                                 }
-                                }, hour, minute, false); // true의 경우 24시간 형식의 TimePicker 출현
+                            }, hour, minute, false); // true의 경우 24시간 형식의 TimePicker 출현
                             timePicker.setTitle("30분 전부터 예약 가능합니다.");
                             timePicker.show();
 
@@ -154,4 +158,3 @@ public class Sign_Reservation extends Fragment {
         return view;
     }
 }
-
