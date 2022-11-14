@@ -54,7 +54,7 @@ public class Signup_home extends AppCompatActivity {
 
         Button ManagementButton = (Button) findViewById(R.id.btn_manager_login);
 
-        if(!user_id.equals("admin"))
+        if(user_id != null && !user_id.equals("admin"))
         {
             ManagementButton.setVisibility(View.GONE);
         }

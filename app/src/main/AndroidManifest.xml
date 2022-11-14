@@ -31,9 +31,6 @@
             android:name=".Comment"
             android:exported="false" />
         <activity
-            android:name=".Detail"
-            android:exported="false" />
-        <activity
             android:name=".Register"
             android:exported="false" />
         <activity

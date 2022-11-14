@@ -7,125 +7,120 @@
     android:orientation="vertical"
     tools:context=".Myfage">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
-        <LinearLayout
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="아이디"
+            android:textSize="15dp"></TextView>
+
+        <EditText
+            android:id="@+id/et_id"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="0dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="아이디"
-                android:textSize="15dp"></TextView>
-
-            <EditText
-                android:id="@+id/et_id"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:inputType="textCapWords"
-                android:minHeight="48dp"
-                android:padding="10dp"
-                android:textColorHint="#757575" />
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:inputType="textCapWords"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColorHint="#757575" />
 
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="패스워드"
-                android:textSize="15dp"></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="패스워드"
+            android:textSize="15dp"></TextView>
 
-            <EditText
-                android:id="@+id/et_pass"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:inputType="textEmailAddress"
-                android:minHeight="48dp"
-                android:padding="10dp"
-                android:textColorHint="#757575" />
+        <EditText
+            android:id="@+id/et_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColorHint="#757575" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="이름"
-                android:textSize="15dp"></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="이름"
+            android:textSize="15dp"></TextView>
 
-            <EditText
-                android:id="@+id/et_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:inputType="textEmailAddress"
-                android:minHeight="48dp"
-                android:padding="10dp"
-                android:textColorHint="#757575" />
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColorHint="#757575" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="생년월일"
-                android:textSize="15dp"></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="생년월일"
+            android:textSize="15dp"></TextView>
 
-            <EditText
-                android:id="@+id/et_birth"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:inputType="textEmailAddress"
-                android:padding="10dp"
-                android:textColorHint="#757575"
-                tools:ignore="TouchTargetSizeCheck" />
+        <EditText
+            android:id="@+id/et_birth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textColorHint="#757575"
+            tools:ignore="TouchTargetSizeCheck" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="전화번호"
-                android:textSize="15dp"></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="전화번호"
+            android:textSize="15dp"></TextView>
 
-            <EditText
-                android:id="@+id/et_phonenum"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:inputType="textEmailAddress"
-                android:minHeight="48dp"
-                android:padding="10dp"
-                android:textColorHint="#757575" />
+        <EditText
+            android:id="@+id/et_phonenum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColorHint="#757575" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="이메일"
-                android:textSize="15dp"></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="이메일"
+            android:textSize="15dp"></TextView>
 
-            <EditText
-                android:id="@+id/et_mail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:inputType="textEmailAddress"
-                android:minHeight="48dp"
-                android:padding="10dp"
-                android:textColorHint="#757575" />
+        <EditText
+            android:id="@+id/et_mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColorHint="#757575" />
 
-            <Button
-                android:id="@+id/btn_update"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="수정"></Button>
-        </LinearLayout>
-    </ScrollView>
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="수정"></Button>
+    </LinearLayout>
 </LinearLayout>

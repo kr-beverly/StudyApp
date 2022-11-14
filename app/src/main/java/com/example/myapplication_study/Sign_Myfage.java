@@ -31,26 +31,25 @@ public class Sign_Myfage extends Fragment {
         view = inflater.inflate(R.layout.activity_signmyfage, container, false);
 
         et_id = (EditText) view.findViewById(R.id.et_id);
-        et_pass = (EditText)view.findViewById(R.id.et_pass);
-        et_name = (EditText)view.findViewById(R.id.et_name);
-        et_birth = (EditText)view.findViewById(R.id.et_birth);
-        et_phonenum = (EditText)view.findViewById(R.id.et_phonenum);
-        et_mail = (EditText)view.findViewById(R.id.et_mail);
+        et_pass = (EditText) view.findViewById(R.id.et_pass);
+        et_name = (EditText) view.findViewById(R.id.et_name);
+        et_birth = (EditText) view.findViewById(R.id.et_birth);
+        et_phonenum = (EditText) view.findViewById(R.id.et_phonenum);
+        et_mail = (EditText) view.findViewById(R.id.et_mail);
 
         Intent intent = getActivity().getIntent();
         String user_id = intent.getStringExtra("user_id");
         String user_pass = intent.getStringExtra("user_pass");
         String name = intent.getStringExtra("name");
         String birth = intent.getStringExtra("birth");
-        String phonenum = intent.getStringExtra("phonenum");
-        String mail = intent.getStringExtra("mail");
+
 
         et_id.setText(user_id);
         et_pass.setText(user_pass);
         et_name.setText(name);
         et_birth.setText(birth);
-        et_phonenum.setText(phonenum);
-        et_mail.setText(mail);
+//        et_phonenum.setText(et_phonenum);
+//        et_mail.setText(et_mail);
 
         et_id = view.findViewById(R.id.et_id);
         et_pass = view.findViewById(R.id.et_pass);
@@ -63,6 +62,7 @@ public class Sign_Myfage extends Fragment {
         btn_update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 String user_id = et_id.getText().toString();
                 String user_pass = et_pass.getText().toString();
                 String user_name = et_name.getText().toString();
@@ -81,7 +81,7 @@ public class Sign_Myfage extends Fragment {
                                 Intent intent = new Intent(getActivity(), Signup_home.class);
                                 startActivity(intent);
                             } else {
-                                Toast.makeText(getActivity(),"정보 수정에 실패하였습니다.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getActivity(), "정보 수정에 실패하였습니다.", Toast.LENGTH_SHORT).show();
 
                                 return;
                             }
