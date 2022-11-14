@@ -47,8 +47,11 @@
         <entry key="..\:/Users/tobi0/AndroidStudioProjects/StudyApp-main/app/src/main/res/layout/activity_buy_voucher.xml" value="0.2" />
         <entry key="..\:/Users/tobi0/AndroidStudioProjects/StudyApp-main/app/src/main/res/layout/activity_signreservation.xml" value="0.1634963768115942" />
         <entry key="..\:/Users/tobi0/AndroidStudioProjects/StudyApp-main/app/src/main/res/layout/activity_signuphome.xml" value="0.17708333333333334" />
+<<<<<<< HEAD
         <entry key="app/src/main/res/layout/activity_buy_voucher.xml" value="0.15715579710144928" />
         <entry key="app/src/main/res/layout/activity_signreservation.xml" value="0.335" />
+=======
+>>>>>>> 3acab35e2b96f78be5e8e32a1836d66c62251dc2
       </map>
     </option>
   </component>
