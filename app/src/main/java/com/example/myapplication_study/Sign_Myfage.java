@@ -40,14 +40,16 @@ public class Sign_Myfage extends Fragment {
         String user_pass = intent.getStringExtra("user_pass");
         String name = intent.getStringExtra("name");
         String birth = intent.getStringExtra("birth");
+        String phonenum = intent.getStringExtra("phonenum");
+        String mail = intent.getStringExtra("mail");
 
 
         et_id.setText(user_id);
         et_pass.setText(user_pass);
         et_name.setText(name);
         et_birth.setText(birth);
-//        et_phonenum.setText(et_phonenum);
-//        et_mail.setText(et_mail);
+        et_phonenum.setText(phonenum);
+        et_mail.setText(mail);
 
         et_id = view.findViewById(R.id.et_id);
         et_pass = view.findViewById(R.id.et_pass);
@@ -75,11 +77,11 @@ public class Sign_Myfage extends Fragment {
                             JSONObject jsonObject = new JSONObject(response);
                             boolean success = jsonObject.getBoolean("success");
                             if (success) {
-                                Toast.makeText(getActivity(), "정보 수정에 성공하였습니다!", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(getActivity(), Signup_home.class);
+                                Toast.makeText(getContext(), "정보 수정에 성공하였습니다!", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(getActivity(), Sign_Myfage.class);
                                 startActivity(intent);
                             } else {
-                                Toast.makeText(getActivity(), "정보 수정에 실패하였습니다.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getContext(), "정보 수정에 실패하였습니다.", Toast.LENGTH_SHORT).show();
 
                                 return;
                             }
@@ -93,7 +95,6 @@ public class Sign_Myfage extends Fragment {
                 UpdateRequest updaterequest = new UpdateRequest(user_id, user_pass, user_name, birth, phonenum, mail, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(getContext());
                 queue.add(updaterequest);
-
             }
         });
         return view;
