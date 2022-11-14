@@ -28,9 +28,21 @@
             android:name=".My_Voucher"
             android:exported="false" />
         <activity
+<<<<<<< HEAD
             android:name=".Comment"
             android:exported="false" />
         <activity
+=======
+            android:name=".UserInfo"
+            android:exported="false" />
+        <activity
+            android:name=".Comment"
+            android:exported="false" />
+        <activity
+            android:name=".Detail"
+            android:exported="false" />
+        <activity
+>>>>>>> 399935cf1fc08a3d6e5f0a665ac5e521947d88f3
             android:name=".Register"
             android:exported="false" />
         <activity
