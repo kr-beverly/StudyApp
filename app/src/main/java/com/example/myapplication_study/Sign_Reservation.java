@@ -7,10 +7,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
-<<<<<<< HEAD
+
 import android.graphics.Color;
-=======
->>>>>>> 3acab35e2b96f78be5e8e32a1836d66c62251dc2
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -97,12 +95,7 @@ public class Sign_Reservation extends Fragment {
                     for (Button tempButton : button){
                         if(tempButton == newButton){
 
-<<<<<<< HEAD
                             String seat_code = String.valueOf(finalI+1);
-=======
-                            int seatID = btnID[finalI];
-                            seat_code = view.findViewById(seatID).getContext().toString();
->>>>>>> 3acab35e2b96f78be5e8e32a1836d66c62251dc2
 
                             final Calendar mcurrentTime = Calendar.getInstance();
                             int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
@@ -137,10 +130,7 @@ public class Sign_Reservation extends Fragment {
                                                         @Override
                                                         public void onClick(DialogInterface dialog, int i) {
                                                             Toast.makeText(getContext(), button[finalI].getText().toString() + "번 좌석 " + textView.getText().toString() + " 예약 확정 되었습니다.", Toast.LENGTH_SHORT).show();
-<<<<<<< HEAD
                                                             button[finalI].setBackgroundColor(getContext().getResources().getColor(R.color.orange));
-=======
->>>>>>> 3acab35e2b96f78be5e8e32a1836d66c62251dc2
                                                             dialog.dismiss();
                                                         }
                                                     });
