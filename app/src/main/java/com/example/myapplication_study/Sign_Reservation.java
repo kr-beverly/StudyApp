@@ -5,13 +5,6 @@ import android.app.AlertDialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-<<<<<<< HEAD
-=======
-import android.content.Intent;
-import android.content.res.Resources;
-
-import android.graphics.Color;
->>>>>>> 399935cf1fc08a3d6e5f0a665ac5e521947d88f3
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,14 +14,6 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-<<<<<<< HEAD
-=======
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-
->>>>>>> 399935cf1fc08a3d6e5f0a665ac5e521947d88f3
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -37,18 +22,10 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 
-<<<<<<< HEAD
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Calendar;
-
-=======
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
->>>>>>> 399935cf1fc08a3d6e5f0a665ac5e521947d88f3
 
 public class Sign_Reservation extends Fragment {
     private View view;

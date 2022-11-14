@@ -51,7 +51,7 @@ public class Buy_Voucher extends AppCompatActivity {
                             boolean success = jsonObject.getBoolean("success");
                             if (success) {
                                 Toast.makeText(getApplicationContext(), "이용권 구매에 성공하였습니다!", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(Buy_Voucher.this, Signup_home.class);
+                                Intent intent = new Intent(Buy_Voucher.this, Sign_Voucher.class);
                                 startActivity(intent);
                             } else {
                                 Toast.makeText(getApplicationContext(),"이용권 구매에 실패하였습니다.", Toast.LENGTH_SHORT).show();

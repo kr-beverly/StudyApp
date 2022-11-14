@@ -42,7 +42,7 @@ public class Sign_Voucher extends Fragment {
         qrcode = (ImageView)view.findViewById(R.id.qrcode) ;
 
         // TODO : QR코드를 읽었을떄, 문자열값
-        String value = "https://www.naver.com";
+        String value = "시간이용권 2시간";
         // ex : 01063313034
         // ex : 300,000,000
         createQRcode(qrcode, value);
