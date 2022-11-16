@@ -82,11 +82,10 @@ public class Sign_Reservation extends Fragment {
                 @Override
                 public void onClick(View view) {
                     Button newButton = (Button) view;
-
                     for (Button tempButton : button){
                         if(tempButton == newButton){
 
-                            String seat_code = String.valueOf(finalI+1);
+                            seat_code = String.valueOf(finalI+1);
 
                             final Calendar mcurrentTime = Calendar.getInstance();
                             int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
@@ -137,7 +136,7 @@ public class Sign_Reservation extends Fragment {
                                                     //Intent intent = new Intent(getActivity().getApplicationContext(), Signup_home.class);
                                                     //startActivity(intent);
                                                 } else {
-                                                    Toast.makeText(getActivity().getApplicationContext(),"이용권 구매에 실패하였습니다.", Toast.LENGTH_SHORT).show();
+                                                    Toast.makeText(getActivity().getApplicationContext(),"예약에 실패하였습니다.", Toast.LENGTH_SHORT).show();
                                                     return;
                                                 }
 

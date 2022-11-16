@@ -13,6 +13,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 
 public class Manager_Seat extends Fragment {
     private View view;
@@ -23,6 +30,7 @@ public class Manager_Seat extends Fragment {
             R.id.manager_seat_21, R.id.manager_seat_22, R.id.manager_seat_23, R.id.manager_seat_24, R.id.manager_seat_25, R.id.manager_seat_26, R.id.manager_seat_27, R.id.manager_seat_28, R.id.manager_seat_29, R.id.manager_seat_30,
             R.id.manager_seat_31, R.id.manager_seat_32, R.id.manager_seat_33, R.id.manager_seat_34, R.id.manager_seat_35, R.id.manager_seat_36, R.id.manager_seat_37, R.id.manager_seat_38, R.id.manager_seat_39, R.id.manager_seat_40};
     Button check_seat_time;
+    String seat_code;
 
     @Nullable
     @Override
@@ -60,24 +68,50 @@ public class Manager_Seat extends Fragment {
                     Button newButton = (Button) view;
                     for (Button tempButton : button) {
                         if (tempButton == newButton) {
-                            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                            builder.setTitle(button[finalI].getText().toString() + "번 좌석");
-                            builder.setMessage("이용불가 좌석으로 지정 하시겠습니까?");
-                            builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+
+                            seat_code = String.valueOf(finalI+1);
+
+                            Response.Listener<String> responseListener = new Response.Listener<String>() {
                                 @Override
-                                public void onClick(DialogInterface dialog, int id) {
-                                    Toast.makeText(getContext(), button[finalI].getText().toString() + "번 좌석 " + "이용불가 처리되었습니다.", Toast.LENGTH_SHORT).show();
-                                    dialog.dismiss();
+                                public void onResponse(String response) {
+                                    try {
+                                        JSONObject jsonObject = new JSONObject(response);
+                                        boolean success = jsonObject.getBoolean("success");
+                                        if (success) {
+                                            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                                            builder.setTitle(button[finalI].getText().toString() + "번 좌석");
+                                            builder.setMessage("이용불가 좌석으로 지정 하시겠습니까?");
+                                            builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                                                @Override
+                                                public void onClick(DialogInterface dialog, int i) {
+                                                    Toast.makeText(getContext(), button[finalI].getText().toString() + "번 좌석 " + "이용불가 처리되었습니다.", Toast.LENGTH_SHORT).show();
+                                                    button[finalI].setBackgroundColor(getContext().getResources().getColor(R.color.gray));
+                                                    dialog.dismiss();
+                                                }
+                                            });
+                                            builder.setNegativeButton("취소", new DialogInterface.OnClickListener() {
+                                                @Override
+                                                public void onClick(DialogInterface dialogInterface, int i) {
+                                                    Toast.makeText(getContext(), "취소되었습니다.", Toast.LENGTH_SHORT).show();
+                                                }
+                                            });
+                                            AlertDialog alertDialog = builder.create();
+                                            alertDialog.show();
+
+                                        } else {
+                                            Toast.makeText(getActivity().getApplicationContext(), "이용불가 좌석 지정에 실패하였습니다.", Toast.LENGTH_SHORT).show();
+                                            return;
+                                        }
+
+                                    } catch (JSONException e) {
+                                        e.printStackTrace();
+                                    }
                                 }
-                            });
-                            builder.setNegativeButton("취소", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
-                                    Toast.makeText(getContext(),"취소되었습니다.", Toast.LENGTH_SHORT).show();
-                                }
-                            });
-                            AlertDialog alertDialog = builder.create();
-                            alertDialog.show();
+                            };
+
+                            ProhibitedRequest prohibitedRequest = new ProhibitedRequest(seat_code, responseListener);
+                            RequestQueue queue = Volley.newRequestQueue(getActivity().getApplicationContext());
+                            queue.add(prohibitedRequest);
                         }
                     }
                 }
