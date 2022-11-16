@@ -2,7 +2,9 @@ package com.example.myapplication_study;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.style.BackgroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -67,52 +69,110 @@ public class Manager_Seat extends Fragment {
                 public void onClick(View view) {
                     Button newButton = (Button) view;
                     for (Button tempButton : button) {
+                        ColorDrawable color = (ColorDrawable) button[finalI].getBackground();
+                        int bgColor = color.getColor();
+
                         if (tempButton == newButton) {
 
-                            seat_code = String.valueOf(finalI+1);
+                            seat_code = String.valueOf(finalI + 1);
 
-                            Response.Listener<String> responseListener = new Response.Listener<String>() {
-                                @Override
-                                public void onResponse(String response) {
-                                    try {
-                                        JSONObject jsonObject = new JSONObject(response);
-                                        boolean success = jsonObject.getBoolean("success");
-                                        if (success) {
-                                            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                                            builder.setTitle(button[finalI].getText().toString() + "번 좌석");
-                                            builder.setMessage("이용불가 좌석으로 지정 하시겠습니까?");
-                                            builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
-                                                @Override
-                                                public void onClick(DialogInterface dialog, int i) {
-                                                    Toast.makeText(getContext(), button[finalI].getText().toString() + "번 좌석 " + "이용불가 처리되었습니다.", Toast.LENGTH_SHORT).show();
-                                                    button[finalI].setBackgroundColor(getContext().getResources().getColor(R.color.gray));
-                                                    dialog.dismiss();
-                                                }
-                                            });
-                                            builder.setNegativeButton("취소", new DialogInterface.OnClickListener() {
-                                                @Override
-                                                public void onClick(DialogInterface dialogInterface, int i) {
-                                                    Toast.makeText(getContext(), "취소되었습니다.", Toast.LENGTH_SHORT).show();
-                                                }
-                                            });
-                                            AlertDialog alertDialog = builder.create();
-                                            alertDialog.show();
+                            if(bgColor == button[finalI].getContext().getColor(R.color.white)) {
+                                Response.Listener<String> responseListener = new Response.Listener<String>() {
+                                    @Override
+                                    public void onResponse(String response) {
+                                        try {
+                                            JSONObject jsonObject = new JSONObject(response);
+                                            boolean success = jsonObject.getBoolean("success");
+                                            if (success) {
+                                                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                                                builder.setTitle(button[finalI].getText().toString() + "번 좌석");
+                                                builder.setMessage("이용불가 좌석으로 지정 하시겠습니까?");
+                                                builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                                                    @Override
+                                                    public void onClick(DialogInterface dialog, int i) {
+                                                        Toast.makeText(getContext(), button[finalI].getText().toString() + "번 좌석 " + "이용불가 처리되었습니다.", Toast.LENGTH_SHORT).show();
+                                                        button[finalI].setBackgroundColor(getContext().getResources().getColor(R.color.gray));
+                                                        dialog.dismiss();
+                                                    }
+                                                });
+                                                builder.setNegativeButton("취소", new DialogInterface.OnClickListener() {
+                                                    @Override
+                                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                                        Toast.makeText(getContext(), "취소되었습니다.", Toast.LENGTH_SHORT).show();
+                                                    }
+                                                });
+                                                AlertDialog alertDialog = builder.create();
+                                                alertDialog.show();
 
-                                        } else {
-                                            Toast.makeText(getActivity().getApplicationContext(), "이용불가 좌석 지정에 실패하였습니다.", Toast.LENGTH_SHORT).show();
-                                            return;
+                                            } else {
+                                                Toast.makeText(getActivity().getApplicationContext(), "이용불가 좌석 지정에 실패하였습니다.", Toast.LENGTH_SHORT).show();
+                                                return;
+                                            }
+
+                                        } catch (JSONException e) {
+                                            e.printStackTrace();
                                         }
-
-                                    } catch (JSONException e) {
-                                        e.printStackTrace();
                                     }
-                                }
-                            };
+                                };
 
-                            ProhibitedRequest prohibitedRequest = new ProhibitedRequest(seat_code, responseListener);
-                            RequestQueue queue = Volley.newRequestQueue(getActivity().getApplicationContext());
-                            queue.add(prohibitedRequest);
+
+                                ProhibitedRequest prohibitedRequest = new ProhibitedRequest(seat_code, responseListener);
+                                RequestQueue queue = Volley.newRequestQueue(getActivity().getApplicationContext());
+                                queue.add(prohibitedRequest);
+                            }
                         }
+
+                        if (tempButton == newButton) {
+
+                            seat_code = String.valueOf(finalI + 1);
+
+                            if(bgColor == button[finalI].getContext().getColor(R.color.gray)) {
+                                Response.Listener<String> responseListener = new Response.Listener<String>() {
+                                    @Override
+                                    public void onResponse(String response) {
+                                        try {
+                                            JSONObject jsonObject = new JSONObject(response);
+                                            boolean success = jsonObject.getBoolean("success");
+                                            if (success) {
+                                                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                                                builder.setTitle(button[finalI].getText().toString() + "번 좌석");
+                                                builder.setMessage("이용가능 좌석으로 지정 하시겠습니까?");
+                                                builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                                                    @Override
+                                                    public void onClick(DialogInterface dialog, int i) {
+                                                        Toast.makeText(getContext(), button[finalI].getText().toString() + "번 좌석 " + "이용가능 처리되었습니다.", Toast.LENGTH_SHORT).show();
+                                                        button[finalI].setBackgroundColor(getContext().getResources().getColor(R.color.white));
+                                                        dialog.dismiss();
+                                                    }
+                                                });
+                                                builder.setNegativeButton("취소", new DialogInterface.OnClickListener() {
+                                                    @Override
+                                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                                        Toast.makeText(getContext(), "취소되었습니다.", Toast.LENGTH_SHORT).show();
+                                                    }
+                                                });
+                                                AlertDialog alertDialog = builder.create();
+                                                alertDialog.show();
+
+                                            } else {
+                                                Toast.makeText(getActivity().getApplicationContext(), "이용가능 좌석 지정에 실패하였습니다.", Toast.LENGTH_SHORT).show();
+                                                return;
+                                            }
+
+                                        } catch (JSONException e) {
+                                            e.printStackTrace();
+                                        }
+                                    }
+                                };
+
+                                AvailableRequest availableRequest = new AvailableRequest(seat_code, responseListener);
+                                RequestQueue queue = Volley.newRequestQueue(getActivity().getApplicationContext());
+                                queue.add(availableRequest);
+                            }
+
+                        }
+
+
                     }
                 }
             });
