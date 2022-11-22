@@ -6,6 +6,7 @@ import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,10 +19,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -45,6 +50,7 @@ public class Sign_Reservation extends Fragment {
     TextView textView;
     Button check_seat_time;
     String seat_code;
+    String url = "http://capstudyapp.dothome.co.kr/SeatCheck.php";
 
     @Nullable
     @Override
@@ -75,6 +81,45 @@ public class Sign_Reservation extends Fragment {
             button[i] = view.findViewById(btnID[i]);
         }
 
+        StringRequest request = new StringRequest(Request.Method.POST, url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            String success = jsonObject.getString("success");
+                            JSONArray jsonArray = jsonObject.getJSONArray("data");
+
+                            if (success.equals("1")) {
+                                for(int i=0;i<jsonArray.length();i++) {
+                                    JSONObject object = jsonArray.getJSONObject(i);
+
+                                    String seat_able = object.getString("seat_able");
+                                    String seat_code = object.getString("seat_code");
+
+                                    Log.d("seat_code",seat_code);
+                                    Log.d("seat_able",seat_able);
+
+                                    if(seat_able.equals("X")) {
+                                        button[i].setBackgroundColor(getContext().getResources().getColor(R.color.gray));
+                                    }
+                                }
+
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getActivity(), error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
+        requestQueue.add(request);
+
         for (int i = 0; i < 40; i++) {
             int finalI = i;
             button[i].setOnClickListener(new View.OnClickListener() {
@@ -104,14 +149,13 @@ public class Sign_Reservation extends Fragment {
                                     }
 
                                     textView.setText(state + " " + selectedHour + "시" + selectedMinute + "분");
-
                                     Response.Listener<String> responseListener = new Response.Listener<String>() {
                                         @Override
                                         public void onResponse(String response) {
-                                            try{
+                                            try {
                                                 JSONObject jsonObject = new JSONObject(response);
                                                 boolean success = jsonObject.getBoolean("success");
-                                                if(success){
+                                                if (success) {
                                                     //확정 팝업
                                                     AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                                                     builder.setTitle(button[finalI].getText().toString() + "번 좌석");
@@ -127,7 +171,7 @@ public class Sign_Reservation extends Fragment {
                                                     builder.setNegativeButton("취소", new DialogInterface.OnClickListener() {
                                                         @Override
                                                         public void onClick(DialogInterface dialogInterface, int i) {
-                                                            Toast.makeText(getContext(),"취소되었습니다.", Toast.LENGTH_SHORT).show();
+                                                            Toast.makeText(getContext(), "취소되었습니다.", Toast.LENGTH_SHORT).show();
                                                         }
                                                     });
                                                     AlertDialog alertDialog = builder.create();
@@ -136,21 +180,23 @@ public class Sign_Reservation extends Fragment {
                                                     //Intent intent = new Intent(getActivity().getApplicationContext(), Signup_home.class);
                                                     //startActivity(intent);
                                                 } else {
-                                                    Toast.makeText(getActivity().getApplicationContext(),"예약에 실패하였습니다.", Toast.LENGTH_SHORT).show();
+                                                    Toast.makeText(getActivity().getApplicationContext(), "예약에 실패하였습니다.", Toast.LENGTH_SHORT).show();
                                                     return;
                                                 }
 
-                                            } catch (JSONException e){
+                                            } catch (JSONException e) {
                                                 e.printStackTrace();
                                             }
                                         }
                                     };
 
+
                                     ReservationRequest reservationRequest = new ReservationRequest(seat_code, responseListener);
                                     RequestQueue queue = Volley.newRequestQueue(getActivity().getApplicationContext());
                                     queue.add(reservationRequest);
-
                                 }
+
+
                             }, hour, minute, false); // true의 경우 24시간 형식의 TimePicker 출현
                             timePicker.setTitle("30분 전부터 예약 가능합니다.");
                             timePicker.show();
