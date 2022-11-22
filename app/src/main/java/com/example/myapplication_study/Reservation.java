@@ -5,6 +5,7 @@ import android.app.TimePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,16 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 
 public class Reservation extends Fragment {
     private View view;
@@ -28,6 +39,7 @@ public class Reservation extends Fragment {
             R.id.seat_21, R.id.seat_22, R.id.seat_23, R.id.seat_24, R.id.seat_25, R.id.seat_26, R.id.seat_27, R.id.seat_28, R.id.seat_29, R.id.seat_30,
             R.id.seat_31, R.id.seat_32, R.id.seat_33, R.id.seat_34, R.id.seat_35, R.id.seat_36, R.id.seat_37, R.id.seat_38, R.id.seat_39, R.id.seat_40};
     Button check_seat_time;
+    String url = "http://capstudyapp.dothome.co.kr/SeatCheck.php";
 
     @Nullable
     @Override
@@ -56,6 +68,45 @@ public class Reservation extends Fragment {
         for (int i = 0; i < 40; i++) {
             button[i] = view.findViewById(btnID[i]);
         }
+
+        StringRequest request = new StringRequest(Request.Method.POST, url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            String success = jsonObject.getString("success");
+                            JSONArray jsonArray = jsonObject.getJSONArray("data");
+
+                            if (success.equals("1")) {
+                                for(int i=0;i<jsonArray.length();i++) {
+                                    JSONObject object = jsonArray.getJSONObject(i);
+
+                                    String seat_able = object.getString("seat_able");
+                                    String seat_code = object.getString("seat_code");
+
+                                    Log.d("seat_code",seat_code);
+                                    Log.d("seat_able",seat_able);
+
+                                    if(seat_able.equals("X")) {
+                                        button[i].setBackgroundColor(getContext().getResources().getColor(R.color.gray));
+                                    }
+                                }
+
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getActivity(), error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
+        requestQueue.add(request);
 
         for (int i = 0; i < 40; i++) {
             int finalI = i;

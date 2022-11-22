@@ -32,7 +32,6 @@
                 android:layout_marginStart="87dp"
                 android:layout_marginTop="98dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="1"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -45,7 +44,6 @@
                 android:layout_marginStart="117dp"
                 android:layout_marginTop="98dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="2"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -58,7 +56,6 @@
                 android:layout_marginStart="147dp"
                 android:layout_marginTop="98dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="3"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -70,7 +67,6 @@
                 android:layout_marginStart="179dp"
                 android:layout_marginTop="98dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="4"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -82,7 +78,6 @@
                 android:layout_marginStart="210dp"
                 android:layout_marginTop="98dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="5"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -94,7 +89,6 @@
                 android:layout_marginStart="242dp"
                 android:layout_marginTop="98dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="6"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -106,7 +100,6 @@
                 android:layout_marginStart="272dp"
                 android:layout_marginTop="98dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="7"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -118,7 +111,6 @@
                 android:layout_marginStart="304dp"
                 android:layout_marginTop="98dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="8"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -130,7 +122,6 @@
                 android:layout_marginStart="335dp"
                 android:layout_marginTop="98dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="9"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -142,7 +133,6 @@
                 android:layout_marginStart="365dp"
                 android:layout_marginTop="98dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="10"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -154,7 +144,6 @@
                 android:layout_marginStart="167dp"
                 android:layout_marginTop="137dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="11"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -166,7 +155,6 @@
                 android:layout_marginStart="167dp"
                 android:layout_marginTop="158dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="12"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -178,7 +166,6 @@
                 android:layout_marginStart="188dp"
                 android:layout_marginTop="137dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="13"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -190,7 +177,6 @@
                 android:layout_marginStart="188dp"
                 android:layout_marginTop="158dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="14"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -202,7 +188,6 @@
                 android:layout_marginStart="228dp"
                 android:layout_marginTop="137dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="15"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -214,7 +199,6 @@
                 android:layout_marginStart="228dp"
                 android:layout_marginTop="158dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="16"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -226,7 +210,6 @@
                 android:layout_marginStart="250dp"
                 android:layout_marginTop="137dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="17"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -238,7 +221,6 @@
                 android:layout_marginStart="250dp"
                 android:layout_marginTop="158dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="18"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -250,7 +232,6 @@
                 android:layout_marginStart="228dp"
                 android:layout_marginTop="194dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="19"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -262,7 +243,6 @@
                 android:layout_marginStart="228dp"
                 android:layout_marginTop="215dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="20"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -274,7 +254,6 @@
                 android:layout_marginStart="250dp"
                 android:layout_marginTop="194dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="21"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -286,7 +265,6 @@
                 android:layout_marginStart="250dp"
                 android:layout_marginTop="215dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="22"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -298,7 +276,6 @@
                 android:layout_marginStart="229dp"
                 android:layout_marginTop="254dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="23"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -310,7 +287,6 @@
                 android:layout_marginStart="229dp"
                 android:layout_marginTop="275dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="24"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -322,7 +298,6 @@
                 android:layout_marginStart="251dp"
                 android:layout_marginTop="254dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="25"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -334,7 +309,6 @@
                 android:layout_marginStart="251dp"
                 android:layout_marginTop="275dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="26"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -346,7 +320,6 @@
                 android:layout_marginStart="294dp"
                 android:layout_marginTop="133dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="27"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -358,7 +331,6 @@
                 android:layout_marginStart="294dp"
                 android:layout_marginTop="154dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="28"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -370,7 +342,6 @@
                 android:layout_marginStart="294dp"
                 android:layout_marginTop="175dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="29"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -382,7 +353,6 @@
                 android:layout_marginStart="315dp"
                 android:layout_marginTop="133dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="30"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -394,7 +364,6 @@
                 android:layout_marginStart="315dp"
                 android:layout_marginTop="154dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="31"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -406,7 +375,6 @@
                 android:layout_marginStart="315dp"
                 android:layout_marginTop="175dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="32"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -418,7 +386,6 @@
                 android:layout_marginStart="294dp"
                 android:layout_marginTop="219dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="33"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -430,7 +397,6 @@
                 android:layout_marginStart="294dp"
                 android:layout_marginTop="240dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="34"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -442,7 +408,6 @@
                 android:layout_marginStart="294dp"
                 android:layout_marginTop="261dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="35"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -454,7 +419,6 @@
                 android:layout_marginStart="315dp"
                 android:layout_marginTop="219dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="36"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -466,7 +430,6 @@
                 android:layout_marginStart="315dp"
                 android:layout_marginTop="240dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="37"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -478,7 +441,6 @@
                 android:layout_marginStart="315dp"
                 android:layout_marginTop="261dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="38"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -489,7 +451,6 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="236dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="Study Room 1"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
@@ -501,7 +462,6 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="292dp"
                 android:background="@android:color/white"
-                android:backgroundTint="@color/white"
                 android:text="Study Room 2"
                 app:layout_constraintStart_toStartOf="@+id/reservation_view"
                 app:layout_constraintTop_toTopOf="@+id/reservation_view" />
