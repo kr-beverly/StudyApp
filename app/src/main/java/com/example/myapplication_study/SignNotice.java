@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -46,12 +47,12 @@ public class SignNotice extends Fragment {
         signNoticeAdapter = new SignNoticeAdapter(getContext(), signNoticeListArrayList);
         sign_notice_listView.setAdapter(signNoticeAdapter);
 
-//        sign_notice_listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-//                startActivity(new Intent(getActivity(),Detail.class).putExtra("position",position));
-//            }
-//        });
+        sign_notice_listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                startActivity(new Intent(SignNotice.this.getActivity(),Detail.class).putExtra("position",position));
+            }
+        });
 
         retrieveData();
 
